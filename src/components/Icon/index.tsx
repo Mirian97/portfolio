@@ -9,11 +9,14 @@ interface IconProps {
   className?: string
 }
 
-const StyledIcon = styled(Box)(({ color }) => ({
+const StyledIcon = styled(Box)(({ color, theme }) => ({
   cursor: 'pointer',
-  ':hover': {
-    opacity: '50%',
-    transition: 'all 0.5s ease-in'
+  // ':hover': {
+  //   opacity: '50%',
+  //   transition: 'all 0.5s ease-in'
+  // },
+  '.MuiSvgIcon-root path, path': {
+    fill: color ?? theme.palette.mode === 'dark' ? '#FFFFFF' : '#000000'
   }
 }))
 

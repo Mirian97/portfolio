@@ -1,5 +1,4 @@
-import { Card, Stack, Typography, styled } from '@mui/material'
-import Icon from 'components/Icon'
+import { Card, Stack, SvgIcon, Typography, styled } from '@mui/material'
 import { ElementType } from 'react'
 
 const StyledCard = styled(Card)(({ theme }) => ({
@@ -8,10 +7,10 @@ const StyledCard = styled(Card)(({ theme }) => ({
   padding: theme.spacing(2),
   transition: '0.5s',
   display: 'flex',
-  alignItems: 'center',
-  ':hover': {
-    rotate: '3deg'
-  }
+  alignItems: 'center'
+  // ':hover': {
+  //   rotate: '3deg'
+  // }
 }))
 
 interface Props {
@@ -23,7 +22,7 @@ interface Props {
 const ContactCard = ({ name, info, icon }: Props) => {
   return (
     <StyledCard elevation={2}>
-      <Icon icon={icon} />
+      <SvgIcon component={icon} color='primary' fontSize='large' inheritViewBox />
       <Stack direction='column' ml={2}>
         <Typography variant='h6' mb={0.5}>
           {name}

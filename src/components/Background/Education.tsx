@@ -18,15 +18,14 @@ const StyledTab = styled(Tab)(({ theme }) => ({
 const Education = () => {
   const [value, setValue] = useState('1')
 
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+  const handleChange = (event: React.SyntheticEvent, newValue: string) =>
     setValue(newValue)
-  }
 
   return (
     <Box sx={{ width: '100%', typography: 'body1' }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <StyledTabList onChange={handleChange} aria-label='lab API tabs example'>
+          <StyledTabList onChange={handleChange}>
             <StyledTab label='Desenvolvimento de Software' value='1' />
             <StyledTab label='Engenharia civil' value='2' />
           </StyledTabList>

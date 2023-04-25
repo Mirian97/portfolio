@@ -1,15 +1,30 @@
 import GetAppIcon from '@mui/icons-material/GetApp'
-import { Button, Grid, Stack, Typography } from '@mui/material'
+import { Button, Grid, Stack, Typography, styled } from '@mui/material'
 import Subtitle from 'components/Subtitle'
 import { Element } from 'react-scroll'
 import Avatar from './Avatar'
+
+const StyledGridContainer = styled(Grid)(({ theme }) => ({
+  margin: theme.spacing(10, 5),
+
+  [theme.breakpoints.down('md')]: {
+    margin: theme.spacing(3, 0),
+    h5: {
+      fontSize: '2rem'
+    }
+  },
+
+  [theme.breakpoints.down('sm')]: {
+    flexDirection: 'column-reverse'
+  }
+}))
 
 const AboutMe = () => {
   return (
     <Element name='about-me'>
       <Subtitle title='About me' />
-      <Grid container spacing={2} my={10} mx={5}>
-        <Grid item xs={6}>
+      <StyledGridContainer container spacing={2}>
+        <Grid item xs={12} sm={6}>
           <Stack direction='column' gap={3}>
             <Typography variant='h5'>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit ab
@@ -26,12 +41,12 @@ const AboutMe = () => {
             </Stack>
           </Stack>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={6}>
           <Stack justifyContent='center' alignItems='center'>
             <Avatar />
           </Stack>
         </Grid>
-      </Grid>
+      </StyledGridContainer>
     </Element>
   )
 }

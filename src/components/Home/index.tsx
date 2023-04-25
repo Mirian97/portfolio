@@ -17,8 +17,16 @@ const StyledHome = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
     flexDirection: 'column',
     justifyContent: 'center',
+    textAlign: 'center'
+  },
+  [theme.breakpoints.down('sm')]: {
     '.content-home': {
-      textAlign: 'center'
+      h1: {
+        fontSize: '5rem'
+      },
+      '.typewriter': {
+        fontSize: '4rem'
+      }
     }
   }
 }))

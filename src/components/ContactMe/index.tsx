@@ -1,5 +1,5 @@
-import MarkEmailReadOutlinedIcon from '@mui/icons-material/MarkEmailReadOutlined'
 import { Grid } from '@mui/material'
+import { ReactComponent as EmailIcon } from 'assets/email-icon.svg'
 import { ReactComponent as LocationIcon } from 'assets/location-icon.svg'
 import { ReactComponent as WhatsappIcon } from 'assets/whatsapp-icon.svg'
 import Subtitle from 'components/Subtitle'
@@ -15,7 +15,7 @@ const contactList = [
   },
   {
     name: 'Email',
-    icon: MarkEmailReadOutlinedIcon,
+    icon: EmailIcon,
     info: 'mirian_quispe97@hotmail.com'
   },
   {
@@ -30,10 +30,10 @@ const ContactMe = () => {
     <Element name='contact-me'>
       <Subtitle title='Contact me' />
       <Grid container my={4} spacing={6}>
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={6}>
           <EmailForm />
         </Grid>
-        <Grid item container xs={6} spacing={1}>
+        <Grid item container xs={12} sm={6} spacing={1}>
           {contactList.map(({ name, icon, info }) => (
             <Grid item xs={12} key={name}>
               <ContactCard name={name} icon={icon} info={info} />

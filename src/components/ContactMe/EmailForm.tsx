@@ -20,63 +20,44 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
   }
 }))
 
-const EmailForm = () => {
-  return (
-    <Grid container spacing={2} component='form'>
-      <Grid item xs={12}>
+const textFields = [
+  { id: 'email', label: 'E-mail', adornmentIcon: AlternateEmailIcon },
+  { id: 'subject', label: 'Assunto', adornmentIcon: SubjectIcon },
+  {
+    id: 'message',
+    label: 'Mensagem',
+    adornmentIcon: EmailRoundedIcon,
+    multiline: true,
+    minRows: 4
+  }
+]
+
+const EmailForm = () => (
+  <Grid container spacing={2} component='form'>
+    {textFields.map(({ id, label, adornmentIcon, multiline, minRows }) => (
+      <Grid item xs={12} key={id}>
         <StyledTextField
-          id='email'
-          name='email'
-          label='E-mail'
+          id={id}
+          label={label}
           fullWidth
+          multiline={multiline}
+          minRows={minRows}
           InputProps={{
             startAdornment: (
               <InputAdornment position='start'>
-                <Icon icon={AlternateEmailIcon} color='white' size={16} />
+                <Icon icon={adornmentIcon} size={16} />
               </InputAdornment>
             )
           }}
         />
       </Grid>
-      <Grid item xs={12}>
-        <StyledTextField
-          id='subject'
-          name='subject'
-          label='Assunto'
-          fullWidth
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position='start'>
-                <Icon icon={SubjectIcon} color='white' size={16} />
-              </InputAdornment>
-            )
-          }}
-        />
-      </Grid>
-      <Grid item xs={12}>
-        <StyledTextField
-          id='message'
-          name='message'
-          label='Mensagem'
-          multiline
-          fullWidth
-          minRows={4}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position='start'>
-                <Icon icon={EmailRoundedIcon} color='white' size={16} />
-              </InputAdornment>
-            )
-          }}
-        />
-      </Grid>
-      <Grid item xs={12} textAlign='center'>
-        <Button variant='contained' endIcon={<SendIcon />}>
-          Enviar E-mail
-        </Button>
-      </Grid>
+    ))}
+    <Grid item xs={12} textAlign='center'>
+      <Button variant='contained' endIcon={<SendIcon />}>
+        Enviar E-mail
+      </Button>
     </Grid>
-  )
-}
+  </Grid>
+)
 
 export default EmailForm

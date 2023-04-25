@@ -18,6 +18,8 @@ const StyledDrawer = styled(MuiDrawer)(({ theme }) => ({
     width: 300
   },
   '.close-drawer': {
+    cursor: 'pointer',
+    fontSize: 40,
     position: 'absolute',
     top: 30,
     right: 35
@@ -29,12 +31,10 @@ const Drawer = () => {
 
   return (
     <StyledDrawer open={openDrawer} anchor='right'>
-      <Icon
+      <CloseRoundedIcon
         className='close-drawer'
-        size={40}
-        icon={CloseRoundedIcon}
         onClick={handleToggleDrawer}
-        color='#ff6563'
+        color='primary'
       />
       <Stack direction='column' gap={3} justifyContent='center' alignItems='center'>
         {menuList.map(({ name, path }, index) => (

@@ -8,7 +8,7 @@ const Projects = () => {
   return (
     <Element name='projects'>
       <Subtitle title='Projects' />
-      <Grid container my={10}>
+      <Grid container my={10} spacing={4}>
         {projectList.map(({ title, description, image, techs }) => (
           <Grid item xs={12} sm={6} md={4} key={title}>
             <Stack direction='row' justifyContent='center'>

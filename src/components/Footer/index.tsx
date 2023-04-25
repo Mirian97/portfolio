@@ -24,8 +24,8 @@ const Footer = () => {
         </Typography>
       </Link>
       <Stack direction='row' justifyContent='center' gap={2} mt={2}>
-        <Icon icon={GithubIcon} />
-        <Icon icon={LinkedinIcon} />
+        <Icon icon={GithubIcon} color='white' />
+        <Icon icon={LinkedinIcon} color='white' />
       </Stack>
     </StyledFooter>
   )
