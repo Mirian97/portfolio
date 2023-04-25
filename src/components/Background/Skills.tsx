@@ -13,7 +13,7 @@ const Skills = () => {
   return (
     <Box maxWidth={450} py={4}>
       <Typography variant='h4' mb={4} textAlign='center' fontFamily='Lilita One'>
-        Habilidadess
+        Habilidades
       </Typography>
       <Stack direction='row' gap={2} justifyContent='center' sx={{ flexWrap: 'wrap' }}>
         {skills.map(({ name, site, iconSource }) => (
