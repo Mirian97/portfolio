@@ -35,7 +35,13 @@ const AboutMe = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia modi
             </Typography>
             <Stack direction='row' justifyContent='center'>
-              <Button variant='contained' endIcon={<GetAppIcon />}>
+              <Button
+                variant='contained'
+                endIcon={<GetAppIcon />}
+                component='a'
+                download
+                href='/pdf/Mirian Quispe - Dev.pdf'
+              >
                 Baixar Currículo
               </Button>
             </Stack>

@@ -33,15 +33,23 @@ const textFields = [
 ]
 
 const EmailForm = () => (
-  <Grid container spacing={2} component='form'>
+  <Grid
+    container
+    spacing={2}
+    component='form'
+    action='https://formsubmit.co/mirian_quispe97@hotmail.com'
+    method='POST'
+  >
     {textFields.map(({ id, label, adornmentIcon, multiline, minRows }) => (
       <Grid item xs={12} key={id}>
         <StyledTextField
           id={id}
+          name={id}
           label={label}
           fullWidth
           multiline={multiline}
           minRows={minRows}
+          required
           InputProps={{
             startAdornment: (
               <InputAdornment position='start'>
@@ -53,7 +61,7 @@ const EmailForm = () => (
       </Grid>
     ))}
     <Grid item xs={12} textAlign='center'>
-      <Button variant='contained' endIcon={<SendIcon />}>
+      <Button variant='contained' endIcon={<SendIcon />} type='submit'>
         Enviar E-mail
       </Button>
     </Grid>
