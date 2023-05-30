@@ -1,17 +1,20 @@
-import { Sofia_Sans } from 'next/font/google'
+import Profile from './Profile'
 import './globals.css'
-
-const sofiaSans = Sofia_Sans({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Portfólio | Sobre mim',
   description: 'Portfólio pessoal de Mirian Quispe'
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='pt-br'>
-      <body className={sofiaSans.className}>{children}</body>
+      <body>
+        <Profile />
+        {children}
+      </body>
     </html>
   )
 }
+
+export default RootLayout
