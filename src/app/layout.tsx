@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-page-custom-font */
+import Menu from './Menu'
 import Profile from './Profile'
 import './globals.css'
 
@@ -17,7 +18,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           rel='stylesheet'
         />
       </head>
-      <body className='pt-16'>
+      <body className='pt-16 flex flex-row items-start'>
+        <Menu />
         <Profile />
         {children}
       </body>
