@@ -1,93 +1,95 @@
+const skillIconSite = 'https://skillicons.dev/icons?i='
+
 const skills = [
   {
     name: 'HMTL',
     site: 'https://html.com/',
-    iconSource: 'https://skillicons.dev/icons?i=html'
+    iconSource: `${skillIconSite}html`
   },
   {
     name: 'CSS',
     site: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-    iconSource: 'https://skillicons.dev/icons?i=css'
+    iconSource: `${skillIconSite}css`
   },
   {
     name: 'JavaScript',
     site: 'https://www.javascript.com/',
-    iconSource: 'https://skillicons.dev/icons?i=js'
+    iconSource: `${skillIconSite}js`
   },
   {
     name: 'TypeScript',
     site: 'https://www.typescriptlang.org/',
-    iconSource: 'https://skillicons.dev/icons?i=ts'
+    iconSource: `${skillIconSite}ts`
   },
   {
     name: 'React',
     site: 'https://reactjs.org/',
-    iconSource: 'https://skillicons.dev/icons?i=react'
+    iconSource: `${skillIconSite}react`
   },
   {
     name: 'Redux',
     site: 'https://react-redux.js.org/',
-    iconSource: 'https://skillicons.dev/icons?i=redux'
+    iconSource: `${skillIconSite}redux`
   },
   {
     name: 'Node.js',
     site: 'https://nodejs.org/en/',
-    iconSource: 'https://skillicons.dev/icons?i=nodejs'
+    iconSource: `${skillIconSite}nodejs`
   },
   {
     name: 'Express',
     site: 'https://express.com/',
-    iconSource: 'https://skillicons.dev/icons?i=express'
+    iconSource: `${skillIconSite}express`
   },
   {
     name: 'Next.js',
     site: 'https://nextjs.org/',
-    iconSource: 'https://skillicons.dev/icons?i=next'
+    iconSource: `${skillIconSite}next`
   },
   {
     name: 'MUI',
     site: 'https://mui.com/',
-    iconSource: 'https://skillicons.dev/icons?i=mui'
+    iconSource: `${skillIconSite}mui`
   },
   {
     name: 'Styled Components',
     site: 'https://styled-components.com/',
-    iconSource: 'https://skillicons.dev/icons?i=styledcomponents'
+    iconSource: `${skillIconSite}styledcomponents`
   },
   {
     name: 'Tailwind CSS',
     site: 'https://tailwindcss.com/',
-    iconSource: 'https://skillicons.dev/icons?i=tailwind'
+    iconSource: `${skillIconSite}tailwind`
   },
   {
     name: 'Bootstrap',
     site: 'https://getbootstrap.com.br/docs/4.1/getting-started/introduction/',
-    iconSource: 'https://skillicons.dev/icons?i=bootstrap'
+    iconSource: `${skillIconSite}bootstrap`
   },
   {
     name: 'Sass',
     site: 'https://sass-lang.com/',
-    iconSource: 'https://skillicons.dev/icons?i=sass'
+    iconSource: `${skillIconSite}sass`
   },
   {
     name: 'PostgreSQL',
     site: 'https://postgres.com/',
-    iconSource: 'https://skillicons.dev/icons?i=postgres'
+    iconSource: `${skillIconSite}postgres`
   },
   {
     name: 'Netlify',
     site: 'https://netlify.com/',
-    iconSource: 'https://skillicons.dev/icons?i=netlify'
+    iconSource: `${skillIconSite}netlify`
   },
   {
     name: 'Vercel',
     site: 'https://vercel.com/',
-    iconSource: 'https://skillicons.dev/icons?i=vercel'
+    iconSource: `${skillIconSite}vercel`
   },
   {
     name: 'VSCode',
     site: 'https://vscode.com/',
-    iconSource: 'https://skillicons.dev/icons?i=vscode'
+    iconSource: `${skillIconSite}vscode`
   }
 ]
 
