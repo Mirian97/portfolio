@@ -17,7 +17,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           rel='stylesheet'
         />
       </head>
-      <body className='pt-16'>
+      <body className='pt-16 xs:pl-[119px]'>
         <Profile />
         {children}
       </body>
