@@ -88,7 +88,7 @@ const skills = [
   },
   {
     name: 'VSCode',
-    site: 'https://vscode.com/',
+    site: 'https://code.visualstudio.com/docs',
     iconSource: `${skillIconSite}vscode`
   }
 ]
