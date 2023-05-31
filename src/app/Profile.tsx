@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import skills from '@/constants/skills'
-import Avatar from '~/svg/avatar.svg'
 import ClipIcon from '~/svg/clip-icon.svg'
 import Dots from '~/svg/dots.svg'
 import GithubIcon from '~/svg/github-icon.svg'
@@ -26,11 +25,21 @@ const socialMedia = [
 
 const Profile = () => {
   const renderAvatarSection = () => (
-    <section className='w-full min-h-[348px] flex flex-col justify-center items-center gap-4 xs:relative'>
-      <Avatar width={287} className='m-auto pt-2' />
-      <div className='flex flex-row gap-5'>
-        <KeyLeft height={118} className='xs:absolute xs:top-0 xs:left-[58px]' />
-        <Dots width={67} className='xs:absolute xs:bottom-0 xs:right-[142px]' />
+    <section className='xs:min-h-[348px] xs:max-w-[424px] m-auto flex flex-col items-center gap-2 xs:relative'>
+      <img
+        src='/image/avatar.png'
+        alt='Avatar'
+        className='xs:pt-2 xs:mt-[10px] max-w-[185px] xs:max-w-[279px] bg-primary-200 rounded-full border-primary-100 border-solid border-[10px] shadow-100'
+      />
+      <div className='flex flex-row items-center gap-[14px]'>
+        <KeyLeft
+          height={60}
+          className='xs:min-h-[118px] xs:absolute xs:top-0 xs:left-0'
+        />
+        <Dots
+          height={12}
+          className='xs:min-h-[17px] xs:absolute xs:bottom-6 xs:right-[84px]'
+        />
         <KeyRight
           height={60}
           className='xs:min-h-[118px] xs:absolute xs:bottom-0 xs:right-0'
