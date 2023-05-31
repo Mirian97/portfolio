@@ -28,16 +28,21 @@ const socialMedia = [
 
 const Profile = () => {
   const renderAvatarSection = () => (
-    <section className='w-full h-[348px] relative'>
-      <KeyLeft height={118} className='absolute top-0 left-[58px]' />
+    <section className='w-full min-h-[348px] flex flex-col justify-center items-center gap-4 xs:relative'>
       <Avatar width={287} className='m-auto pt-2' />
-      <Dots width={67} className='absolute bottom-8 right-[174px]' />
-      <KeyRight height={118} className='absolute bottom-0 right-[58px]' />
+      <div className='flex flex-row gap-5'>
+        <KeyLeft height={118} className='xs:absolute xs:top-0 xs:left-[58px]' />
+        <Dots width={67} className='xs:absolute xs:bottom-0 xs:right-[142px]' />
+        <KeyRight
+          height={118}
+          className='xs:absolute xs:bottom-[-28px] xs:right-[58px]'
+        />
+      </div>
     </section>
   )
 
   const renderTitleAndSocialMedia = () => (
-    <section className='my-8 ml-[58px]'>
+    <section className='my-8 xs:ml-[58px]'>
       <h1 className='text-2xl text-primary-200 mb-[10px]'>Olá, sou Mirian Quispe e...</h1>
       <h1 className='text-5xl text-secondary-400 font-bold leading-[58px]'>
         Desenvolvedora
@@ -54,11 +59,17 @@ const Profile = () => {
   )
 
   const renderSkills = () => (
-    <section className='flex flex-col items-center mb-[70px] mx-6'>
+    <section className='flex flex-col items-center mb-12 xs:mb-[70px] xs:mx-6 '>
       <Subtitle content='Habilidades' />
       <div className='flex flex-row flex-wrap justify-center gap-6 w-full mt-8'>
         {skills.map(({ name, site, iconSource }) => (
-          <a key={name} href={site} target='_blank' rel='noreferrer'>
+          <a
+            key={name}
+            href={site}
+            target='_blank'
+            rel='noreferrer'
+            className='cursor-pointer'
+          >
             <img alt={name} src={iconSource} />
           </a>
         ))}
@@ -67,23 +78,23 @@ const Profile = () => {
   )
 
   const renderButtonsAndGif = () => (
-    <section className='flex flex-row gap-6 justify-between'>
+    <section className='flex flex-col gap-10 xs:flex-row xs:justify-between xs:mb-8 xs:gap-6'>
       <div className='w-full flex flex-col gap-3 justify-end'>
-        <Button endIcon={<ClipIcon height={21} />}>Me Contratar</Button>
-        <Button endIcon={<WhatsappIcon height={21} />}>Baixar CV</Button>
+        <Button endIcon={<WhatsappIcon height={21} />}>Me Contratar</Button>
+        <Button endIcon={<ClipIcon height={21} />}>Baixar CV</Button>
       </div>
       <Image
         src={CatGif}
         alt='Gif de um gato'
         width={206}
         height={197}
-        className='mb-[-42px]'
+        className='self-center mb-[-11px] xs:mb-[-42px] min-w-[206px]'
       />
     </section>
   )
 
   return (
-    <aside className='card border-3 rounded-[28px] w-[604px] px-8 pb-8 leading-[29px]'>
+    <aside className='card border-3 rounded-[28px] w-[604px] px-5 xs:px-8'>
       {renderAvatarSection()}
       {renderTitleAndSocialMedia()}
       {renderSkills()}
