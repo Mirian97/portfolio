@@ -25,6 +25,11 @@ const skills = [
     iconSource: 'https://skillicons.dev/icons?i=react'
   },
   {
+    name: 'Redux',
+    site: 'https://react-redux.js.org/',
+    iconSource: 'https://skillicons.dev/icons?i=redux'
+  },
+  {
     name: 'Node.js',
     site: 'https://nodejs.org/en/',
     iconSource: 'https://skillicons.dev/icons?i=nodejs'
@@ -35,6 +40,11 @@ const skills = [
     iconSource: 'https://skillicons.dev/icons?i=express'
   },
   {
+    name: 'Next.js',
+    site: 'https://nextjs.org/',
+    iconSource: 'https://skillicons.dev/icons?i=next'
+  },
+  {
     name: 'MUI',
     site: 'https://mui.com/',
     iconSource: 'https://skillicons.dev/icons?i=mui'
@@ -43,6 +53,16 @@ const skills = [
     name: 'Styled Components',
     site: 'https://styled-components.com/',
     iconSource: 'https://skillicons.dev/icons?i=styledcomponents'
+  },
+  {
+    name: 'Tailwind CSS',
+    site: 'https://tailwindcss.com/',
+    iconSource: 'https://skillicons.dev/icons?i=tailwind'
+  },
+  {
+    name: 'Bootstrap',
+    site: 'https://getbootstrap.com.br/docs/4.1/getting-started/introduction/',
+    iconSource: 'https://skillicons.dev/icons?i=bootstrap'
   },
   {
     name: 'Sass',
