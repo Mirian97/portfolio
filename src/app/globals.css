@@ -18,21 +18,34 @@ body {
 
 .card {
   background-color: #fff;
-  padding-top: 48px;
+  @apply pt-8 xs:pt-12;
 }
 
 .button {
-  transition: all 0.3s ease-in-out;
-  @apply bg-primary-200 text-white font-bold text-2xl leading-[29px] w-full rounded-full py-4 flex flex-row justify-center items-center gap-1;
-}
-
-.button:hover {
-  @apply hover:bg-white hover:border-solid hover:border-primary-200 hover:text-primary-200;
+  border-style: solid;
   border-width: 3px;
+  transition: all 0.3s ease-in-out;
+  @apply font-bold text-2xl leading-[29px] w-full min-h-[61px] rounded-full flex flex-row justify-center items-center gap-1 border-primary-200;
 }
 
-.button:hover path {
+.button path {
   fill: currentColor;
+}
+
+.button-contained {
+  @apply bg-primary-200 text-white;
+}
+
+.button-outlined {
+  @apply bg-white text-primary-200;
+}
+
+.button-contained:hover {
+  @apply bg-white text-primary-200;
+}
+
+.button-outlined:hover {
+  @apply bg-primary-200 text-white;
 }
 
 .social-media:hover path {
