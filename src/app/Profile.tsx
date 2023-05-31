@@ -2,7 +2,6 @@
 import skills from '@/constants/skills'
 import Image from 'next/image'
 import CatGif from '~/gif/cat.gif'
-import Avatar from '~/svg/avatar.svg'
 import ClipIcon from '~/svg/clip-icon.svg'
 import Dots from '~/svg/dots.svg'
 import GithubIcon from '~/svg/github-icon.svg'
@@ -29,7 +28,7 @@ const socialMedia = [
 const Profile = () => {
   const renderAvatarSection = () => (
     <section className='w-full min-h-[348px] flex flex-col justify-center items-center gap-4 xs:relative'>
-      <Avatar width={287} className='m-auto pt-2' />
+      <img src='/svg/avatar.svg' alt='avatar' className='m-auto pt-2' />
       <div className='flex flex-row gap-5'>
         <KeyLeft height={118} className='xs:absolute xs:top-0 xs:left-[58px]' />
         <Dots width={67} className='xs:absolute xs:bottom-0 xs:right-[142px]' />
@@ -94,7 +93,7 @@ const Profile = () => {
   )
 
   return (
-    <aside className='card border-3 rounded-[28px] w-[604px] px-5 xs:px-8'>
+    <aside className='card border-3 rounded-[28px] w-full px-5 xs:px-8'>
       {renderAvatarSection()}
       {renderTitleAndSocialMedia()}
       {renderSkills()}
