@@ -10,6 +10,9 @@
 
 body {
   font-family: 'Sofia Sans', sans-serif;
+  background-image: url('/image/background.png');
+  background-size: cover;
+  background-attachment: fixed;
   word-break: break-word;
 }
 
