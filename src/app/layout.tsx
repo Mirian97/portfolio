@@ -18,10 +18,12 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           rel='stylesheet'
         />
       </head>
-      <body className='pt-16 flex flex-row items-start'>
+      <body className='pt-16 flex flex-col xs:flex-row xs:items-start xs:pl-[119px]'>
         <Menu />
         <Profile />
-        {children}
+        <section className='card mt-12 px-6 pb-8 xs:px-10 min-h-[1045px] rounded-[28px] xs:border-l-0 xs:rounded-none'>
+          {children}
+        </section>
       </body>
     </html>
   )
