@@ -16,20 +16,13 @@ body {
   word-break: break-word;
 }
 
-.border-3 {
-  border: 3px solid #e4e4e4;
-}
-
 .card {
-  background-color: #fff;
-  @apply pt-8 xs:pt-12;
+  @apply bg-white border-[3px] border-solid border-secondary-50 pt-8 xs:pt-12;
 }
 
 .button {
-  border-style: solid;
-  border-width: 3px;
   transition: all 0.3s ease-in-out;
-  @apply font-bold text-2xl leading-[29px] w-full min-h-[61px] rounded-full flex flex-row justify-center items-center gap-1 border-primary-200;
+  @apply font-bold text-2xl leading-[29px] w-full min-h-[61px] rounded-full flex flex-row justify-center items-center gap-1 border-[3px] border-solid border-primary-200;
 }
 
 .button path {
@@ -55,4 +48,19 @@ body {
 .social-media:hover path {
   transition: all 0.4s ease-in-out;
   @apply fill-primary-200;
+}
+
+.menu-item {
+  transition: all 0.3s ease-in-out;
+  word-break: normal;
+  @apply flex flex-col justify-center items-center gap-1 w-[89px] text-secondary-400 text-[16px] font-bold hover:text-primary-200;
+}
+
+.menu-item-active {
+  @apply text-primary-200;
+}
+
+.menu-item-active path,
+.menu-item:hover path {
+  @apply fill-current;
 }
