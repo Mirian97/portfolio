@@ -52,6 +52,7 @@ body {
 
 .menu-item {
   transition: all 0.3s ease-in-out;
+  word-break: normal;
   @apply flex flex-col justify-center items-center gap-1 mx-6 text-secondary-400 hover:text-primary-200 text-[16px] font-bold;
 }
 
