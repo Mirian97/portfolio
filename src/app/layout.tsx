@@ -1,17 +1,28 @@
-import { Sofia_Sans } from 'next/font/google'
+/* eslint-disable @next/next/no-page-custom-font */
+import Profile from './Profile'
 import './globals.css'
-
-const sofiaSans = Sofia_Sans({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Portfólio | Sobre mim',
   description: 'Portfólio pessoal de Mirian Quispe'
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang='pt-br'>
-      <body className={sofiaSans.className}>{children}</body>
+      <head>
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;700&display=swap'
+          rel='stylesheet'
+        />
+      </head>
+      <body className='pt-16'>
+        <Profile />
+        {children}
+      </body>
     </html>
   )
 }
+
+export default RootLayout
