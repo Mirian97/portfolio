@@ -31,6 +31,10 @@ const menuList = [
 const Menu = () => {
   const activeSegment = useSelectedLayoutSegment()
 
+  const renderMenuDivider = () => (
+    <hr className='bg-secondary-25 rounded-[8px] min-w-[5px] min-h-[45px] xs:min-h-[1px] xs:w-full' />
+  )
+
   return (
     <nav className='bg-white border-[3px] border-solid border-secondary-50 rounded-[28px] rounded-b-none xs:rounded-[28px] xs:border-r-0 xs:rounded-r-none pt-4 pb-6 xs:py-6 xs:px-2 xs:mt-7 fixed xs:static bottom-0 left-0 right-0 flex flex-row justify-evenly items-center xs:flex-col xs:justify-center xs:gap-6'>
       {menuList.map(({ menuLabel, path, menuIcon, targetSegment }, index) => (
@@ -44,9 +48,7 @@ const Menu = () => {
             {menuIcon}
             {menuLabel}
           </Link>
-          {index !== menuList.length - 1 && (
-            <hr className='bg-secondary-25 rounded-[8px] min-w-[5px] min-h-[45px] xs:min-h-[1px] xs:w-full' />
-          )}
+          {index !== menuList.length - 1 && renderMenuDivider()}
         </Fragment>
       ))}
     </nav>
