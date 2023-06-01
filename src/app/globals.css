@@ -45,3 +45,17 @@ body {
   transition: all 0.4s ease-in-out;
   @apply fill-primary-200;
 }
+
+.menu-item {
+  transition: all 0.3s ease-in-out;
+  @apply flex flex-col justify-center items-center gap-1 mx-6 text-secondary-400 hover:text-primary-200 text-[16px] font-bold;
+}
+
+.menu-item-active {
+  @apply text-primary-200;
+}
+
+.menu-item-active path,
+.menu-item:hover path {
+  @apply fill-primary-200;
+}
