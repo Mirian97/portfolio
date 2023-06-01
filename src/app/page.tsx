@@ -2,7 +2,7 @@ import Title from '@/components/Title'
 import { aboutList } from '@/constants/about'
 import AboutItem from './AboutItem'
 
-const Home = () => {
+const About = () => {
   return (
     <div>
       <Title content='Sobre mim' />
@@ -15,4 +15,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default About

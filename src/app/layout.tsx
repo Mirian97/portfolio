@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-page-custom-font */
+import Menu from './Menu'
 import Profile from './Profile'
 import './globals.css'
 
@@ -18,6 +19,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         />
       </head>
       <body className='pt-16 flex flex-col xs:flex-row xs:items-start xs:pl-[119px]'>
+        <Menu />
         <Profile />
         <section className='card my-8 xs:mt-12 px-6 pb-8 xs:px-10 min-h-[1045px] rounded-[28px] xs:border-l-0 xs:rounded-none w-full'>
           {children}
