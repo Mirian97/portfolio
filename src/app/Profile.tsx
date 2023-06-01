@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import skills from '@/constants/skills'
+import Link from 'next/link'
 import ClipIcon from '~/svg/clip-icon.svg'
 import Dots from '~/svg/dots.svg'
 import GithubIcon from '~/svg/github-icon.svg'
@@ -87,10 +88,17 @@ const Profile = () => {
   const renderButtonsAndGif = () => (
     <section className='flex flex-col gap-6 xs:flex-row xs:justify-between xs:mb-8 xs:gap-6'>
       <div className='w-full flex flex-col gap-3 justify-end'>
-        <Button endIcon={<WhatsappIcon height={21} />}>Me Contratar</Button>
-        <Button endIcon={<ClipIcon height={21} />} variant='outlined'>
-          Baixar CV
-        </Button>
+        <Link
+          href='https://wa.me/11962659170?text=Ol%C3%A1,%20pode%20me%20ajudar?'
+          target='_blank'
+        >
+          <Button endIcon={<WhatsappIcon height={21} />}>Me Contratar</Button>
+        </Link>
+        <a href='/pdf/Mirian Quispe - CV.pdf' download>
+          <Button endIcon={<ClipIcon height={21} />} variant='outlined'>
+            Baixar CV
+          </Button>
+        </a>
       </div>
       <img
         src='/gif/cat.gif'
