@@ -1,12 +1,12 @@
-/* eslint-disable @next/next/no-img-element */
 'use client'
 import Link from 'next/link'
+import { useSelectedLayoutSegment } from 'next/navigation'
+import { Fragment } from 'react'
 import AboutMenuIcon from '~/svg/about-menu-icon.svg'
 import ContactMenuIcon from '~/svg/contact-menu-icon.svg'
 import ProjectsMenuIcon from '~/svg/projects-menu-icon.svg'
 
-const iconWidth = 40
-
+const iconWidth = 30
 const menuList = [
   {
     menuLabel: 'Sobre',
@@ -17,29 +17,37 @@ const menuList = [
   {
     menuLabel: 'Projetos',
     path: '/projects',
-    targetSegment: 'news',
-    menuIcon: <ProjectsMenuIcon icon={iconWidth} />
+    targetSegment: 'projects',
+    menuIcon: <ProjectsMenuIcon width={iconWidth} />
   },
   {
     menuLabel: 'Contato',
     path: '/contact',
     targetSegment: 'contact',
-    menuIcon: <ContactMenuIcon icon={iconWidth} />
+    menuIcon: <ContactMenuIcon width={iconWidth} />
   }
 ]
 
 const Menu = () => {
+  const activeSegment = useSelectedLayoutSegment()
+
   return (
-    <nav className='border-[3px] border-solid border-secondary-50 border-r-0 rounded-[28px] rounded-r-none py-6 px-8 flex flex-col gap-12 mt-7 transition-all duration-400 ease-in-out'>
-      {menuList.map(({ menuLabel, path, menuIcon }) => (
-        <Link
-          key={menuLabel}
-          href={path}
-          className='flex flex-col justify-center items-center gap-1 hover:text-primary-200 text-md font-bold'
-        >
-          {menuIcon}
-          {menuLabel}
-        </Link>
+    <nav className='bg-white border-[3px] border-solid border-secondary-50 rounded-[28px] rounded-b-none xs:rounded-[28px] xs:border-r-0 xs:rounded-r-none pt-4 pb-6 xs:py-6 xs:px-2 xs:mt-7 fixed xs:static bottom-0 left-0 right-0 flex flex-row justify-evenly items-center xs:flex-col xs:justify-center xs:gap-6'>
+      {menuList.map(({ menuLabel, path, menuIcon, targetSegment }, index) => (
+        <Fragment key={index}>
+          <Link
+            href={path}
+            className={`menu-item ${
+              activeSegment === targetSegment && 'menu-item-active'
+            }`}
+          >
+            {menuIcon}
+            {menuLabel}
+          </Link>
+          {index !== menuList.length - 1 && (
+            <hr className='bg-secondary-25 rounded-[8px] min-w-[5px] min-h-[45px] xs:min-h-[1px] xs:w-full' />
+          )}
+        </Fragment>
       ))}
     </nav>
   )
