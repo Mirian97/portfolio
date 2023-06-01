@@ -17,9 +17,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           rel='stylesheet'
         />
       </head>
-      <body className='pt-16 xs:pl-[119px]'>
+      <body className='pt-16 flex flex-col xs:flex-row xs:items-start xs:pl-[119px]'>
         <Profile />
-        {children}
+        <section className='card my-8 xs:mt-12 px-6 pb-8 xs:px-10 min-h-[1045px] rounded-[28px] xs:border-l-0 xs:rounded-none w-full'>
+          {children}
+        </section>
       </body>
     </html>
   )
