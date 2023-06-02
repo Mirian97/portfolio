@@ -17,6 +17,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           href='https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;700&display=swap'
           rel='stylesheet'
         />
+        <link rel='icon' href='./favicon.ico' />
       </head>
       <body className='pt-16 flex flex-col xs:flex-row xs:items-start xs:pl-[119px]'>
         <Menu />
