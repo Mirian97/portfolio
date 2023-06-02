@@ -24,16 +24,14 @@ const About = () => (
     <section className='hidden sm:flex flex-row justify-between mb-8'>
       {locationAndAvailability.map(({ name, description }) => (
         <div key={name} className='flex flex-row gap-1'>
-          <h5 className='font-bold text-xl leading-6 text-secondary-300 break-normal'>
-            {name}:
-          </h5>
+          <h5 className='text-about font-bold break-normal'>{name}:</h5>
           <h5 className='text-xl leading-6 text-success-200'>{description}</h5>
         </div>
       ))}
     </section>
     <Subtitle content='Curiosidades' dividerHeight='thin' />
-    <p className='text-about mt-4 mb-10'>{curiosities}</p>
-    <section className='flex flex-col gap-10 sm:flex-row sm:gap-2 sm:justify-between sm:items-end'>
+    <p className='text-about mt-4 mb-10 sm:mb-8'>{curiosities}</p>
+    <section className='flex flex-col gap-10 px-2 sm:flex-row sm:gap-1 sm:justify-between sm:items-end'>
       <LanguageOrServiceList
         listIcon={<ListIcon width={8} />}
         list={languages}
