@@ -9,7 +9,8 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        100: ' 0px 4px 4px rgba(0, 0, 0, 0.25);'
+        100: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+        200: '0px 0px 4px #FC9B9B'
       },
       colors: {
         primary: {
@@ -23,6 +24,9 @@ module.exports = {
           200: '#344054',
           300: '#8E8E8E',
           400: '#1C1C1C'
+        },
+        success: {
+          200: '#219653'
         }
       }
     },
