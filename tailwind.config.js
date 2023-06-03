@@ -24,6 +24,19 @@ module.exports = {
           300: '#8E8E8E',
           400: '#1C1C1C'
         }
+      },
+      animation: {
+        'move-left-to-right': 'move-left-to-right 3s linear infinite'
+      },
+      keyframes: {
+        'move-left-to-right': {
+          '0%': {
+            left: -42
+          },
+          '100%': {
+            left: '100%'
+          }
+        }
       }
     },
     screens: {
