@@ -19,10 +19,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         />
         <link rel='icon' href='./favicon.ico' />
       </head>
-      <body className='pt-16 flex flex-col xs:flex-row xs:items-start xs:pl-[119px]'>
+      <body className='pt-16 flex flex-col sm:flex-row sm:items-start sm:pl-5 md:pl-[119px]'>
         <Menu />
         <Profile />
-        <section className='card mt-12 px-6 pb-8 xs:px-10 min-h-[1045px] rounded-[28px] xs:border-l-0 xs:rounded-none'>
+        <section className='card mt-8 mb-[127px] sm:mt-12 px-6 pb-8 sm:px-10 sm:min-h-[1045px] rounded-[28px] sm:border-l-0 sm:rounded-none w-full'>
           {children}
         </section>
       </body>

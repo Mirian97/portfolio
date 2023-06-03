@@ -17,7 +17,7 @@ body {
 }
 
 .card {
-  @apply bg-white border-[3px] border-solid border-secondary-50 pt-8 xs:pt-12;
+  @apply bg-white border-[3px] border-solid border-secondary-50 pt-8 sm:pt-12;
 }
 
 .button {
@@ -63,4 +63,8 @@ body {
 .menu-item-active path,
 .menu-item:hover path {
   @apply fill-current;
+}
+
+.text-about {
+  @apply text-[16px] leading-[19px] sm:text-xl sm:leading-6 text-secondary-300;
 }
