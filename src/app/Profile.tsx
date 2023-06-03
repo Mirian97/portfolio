@@ -26,37 +26,34 @@ const socialMedia = [
 
 const Profile = () => {
   const renderAvatarSection = () => (
-    <section className='xs:min-h-[348px] xs:max-w-[424px] m-auto flex flex-col items-center gap-2 xs:relative'>
+    <section className='sm:min-h-[348px] sm:max-w-[424px] flex flex-col items-center sm:flex-row sm:gap-3 sm:justify-center m-auto relative'>
+      <KeyLeft className='hidden sm:flex sm:w-[13%] sm:self-start' />
       <img
         src='/image/avatar.png'
         alt='Avatar'
-        className='xs:pt-2 xs:mt-[10px] max-w-[185px] xs:max-w-[279px] bg-primary-200 rounded-full border-primary-100 border-solid border-[10px] shadow-100'
+        className='sm:mt-[10px] w-[185px] sm:w-[65%] bg-primary-200 rounded-full border-primary-100 border-solid border-[10px] shadow-100 sm:self-start'
       />
-      <div className='flex flex-row items-center gap-[14px]'>
-        <KeyLeft
-          height={60}
-          className='xs:min-h-[118px] xs:absolute xs:top-0 xs:left-0'
-        />
-        <Dots
-          height={12}
-          className='xs:min-h-[17px] xs:absolute xs:bottom-6 xs:right-[84px]'
-        />
-        <KeyRight
-          height={60}
-          className='xs:min-h-[118px] xs:absolute xs:bottom-0 xs:right-0'
-        />
+      <Dots
+        height={17}
+        className='hidden sm:flex sm:absolute sm:bottom-8 sm:right-[82px]'
+      />
+      <KeyRight className='hidden sm:flex sm:w-[13%] sm:mt-[224px]' />
+      <div className='sm:hidden flex flex-row gap-[14px] items-center mt-2'>
+        <KeyLeft width={33} />
+        <Dots height={12} />
+        <KeyRight width={33} />
       </div>
     </section>
   )
 
   const renderTitleAndSocialMedia = () => (
-    <section className='mt-6 mb-8 xs:my-8 xs:ml-[58px]'>
+    <section className='mt-6 mb-8 sm:my-8 sm:ml-[58px]'>
       <h1 className='text-2xl text-primary-200 mb-[10px]'>Olá, sou Mirian Quispe e...</h1>
       <h1 className='text-5xl text-secondary-400 font-bold leading-[58px]'>
         Desenvolvedora
       </h1>
       <h1 className='text-4xl font-medium text-primary-200 leading-[48px]'>Full Stack</h1>
-      <div className='flex flex-row gap-4 mt-4 xs:mt-5'>
+      <div className='flex flex-row gap-4 mt-4 sm:mt-5'>
         {socialMedia.map(({ name, link, icon }) => (
           <a key={name} href={link} target='_blank' className='social-media'>
             {icon}
@@ -67,9 +64,9 @@ const Profile = () => {
   )
 
   const renderSkills = () => (
-    <section className='flex flex-col items-center mb-8 xs:mb-[70px] xs:mx-6 '>
+    <section className='flex flex-col items-center mb-8 sm:mb-[70px] sm:mx-6 '>
       <Subtitle content='Habilidades' />
-      <div className='flex flex-row flex-wrap justify-center gap-6 w-full mt-6 xs:mt-8'>
+      <div className='flex flex-row flex-wrap justify-center gap-6 w-full mt-6 sm:mt-8'>
         {skills.map(({ name, site, iconSource }) => (
           <a
             key={name}
@@ -86,7 +83,7 @@ const Profile = () => {
   )
 
   const renderButtonsAndGif = () => (
-    <section className='flex flex-col gap-6 xs:flex-row xs:justify-between xs:mb-8 xs:gap-6'>
+    <section className='flex flex-col gap-6 sm:flex-row sm:justify-between sm:mb-8 sm:gap-6'>
       <div className='w-full flex flex-col gap-3 justify-end'>
         <Link
           href='https://wa.me/11962659170?text=Ol%C3%A1,%20pode%20me%20ajudar?'
@@ -103,17 +100,19 @@ const Profile = () => {
       <img
         src='/gif/cat.gif'
         alt='Gif de um gato'
-        className='self-center mb-[-11px] xs:mb-[-42px] min-w-[206px]'
+        className='self-center mb-[-11px] sm:mb-[-42px] max-w-[206px]'
       />
     </section>
   )
 
   return (
-    <aside className='card rounded-[28px] w-full px-6 xs:px-8 '>
+    <aside className='card rounded-[28px] w-full'>
       {renderAvatarSection()}
-      {renderTitleAndSocialMedia()}
-      {renderSkills()}
-      {renderButtonsAndGif()}
+      <div className='px-6 sm:px-8'>
+        {renderTitleAndSocialMedia()}
+        {renderSkills()}
+        {renderButtonsAndGif()}
+      </div>
     </aside>
   )
 }
