@@ -8,6 +8,14 @@
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  width: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-secondary-400 rounded-lg;
+}
+
 body {
   font-family: 'Sofia Sans', sans-serif;
   background-image: url('/image/background.png');
@@ -18,6 +26,10 @@ body {
 
 .card {
   @apply bg-white border-[3px] border-solid border-secondary-50 pt-8 sm:pt-12;
+}
+
+.card::-webkit-scrollbar-track {
+  @apply lg:my-6;
 }
 
 .button {
