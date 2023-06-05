@@ -18,7 +18,7 @@ const Projects = () => {
   return (
     <>
       <Title content='Projetos Recentes' />
-      <div className='flex flex-col gap-6 xs:gap-[26px]'>
+      <div className='flex flex-col gap-6 mt-8 xs:gap-[26px]'>
         <div className='project-grid-column'>
           <ProjectItem {...projects[0]} />
           {renderVerticalDivider}
