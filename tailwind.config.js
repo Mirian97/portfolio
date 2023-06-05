@@ -28,6 +28,19 @@ module.exports = {
         success: {
           200: '#219653'
         }
+      },
+      animation: {
+        'move-left-to-right': 'move-left-to-right 3s linear infinite'
+      },
+      keyframes: {
+        'move-left-to-right': {
+          '0%': {
+            left: -42
+          },
+          '100%': {
+            left: '100%'
+          }
+        }
       }
     },
     screens: {

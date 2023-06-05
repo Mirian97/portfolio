@@ -10,6 +10,7 @@ import LinkedinIcon from '~/svg/linkedin-icon.svg'
 import WhatsappIcon from '~/svg/whatsapp-icon.svg'
 import Button from '../components/Button'
 import Subtitle from '../components/Subtitle'
+import TypingEffect from './TypingEffect'
 
 const socialMedia = [
   {
@@ -23,6 +24,7 @@ const socialMedia = [
     link: 'https://www.linkedin.com/in/dev-mirian-quispe/'
   }
 ]
+const stacks = ['Full-Stack', 'Frontend', 'Backend']
 
 const Profile = () => {
   const renderAvatarSection = () => (
@@ -52,7 +54,9 @@ const Profile = () => {
       <h1 className='text-5xl text-secondary-400 font-bold leading-[58px]'>
         Desenvolvedora
       </h1>
-      <h1 className='text-4xl font-medium text-primary-200 leading-[48px]'>Full Stack</h1>
+      <h1 className='text-4xl font-medium text-primary-200 leading-[48px]'>
+        <TypingEffect textToBeTyped={stacks} />
+      </h1>
       <div className='flex flex-row gap-4 mt-4 sm:mt-5'>
         {socialMedia.map(({ name, link, icon }) => (
           <a key={name} href={link} target='_blank' className='social-media'>

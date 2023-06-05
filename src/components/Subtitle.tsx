@@ -2,7 +2,7 @@ import Divider from './Divider'
 
 interface SubtitleProps {
   content: string
-  dividerHeight?: string
+  dividerHeight?: 'thin'
 }
 
 const Subtitle = ({ content, dividerHeight }: SubtitleProps) => {
