@@ -102,3 +102,7 @@ body {
 .project-link:hover img {
   @apply scale-[120%];
 }
+
+.project-grid-column {
+  @apply grid grid-cols-1 xs:grid-cols-[1fr_auto_1fr] gap-6;
+}
