@@ -39,7 +39,7 @@ const About = () => (
       >
         <Subtitle content='Idiomas' dividerHeight='thin' />
       </LanguageOrServiceList>
-      <ProjectDivider />
+      <ProjectDivider className='hidden sm:flex' />
       <LanguageOrServiceList
         listIcon={<StarIcon width={12} />}
         list={services}
