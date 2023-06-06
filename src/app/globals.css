@@ -8,6 +8,14 @@
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  width: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-secondary-400 rounded-lg;
+}
+
 body {
   font-family: 'Sofia Sans', sans-serif;
   background-image: url('/image/background.png');
@@ -18,6 +26,10 @@ body {
 
 .card {
   @apply bg-white border-[3px] border-solid border-secondary-50 pt-8 sm:pt-12;
+}
+
+.card::-webkit-scrollbar-track {
+  @apply lg:my-6;
 }
 
 .button {
@@ -67,4 +79,30 @@ body {
 
 .text-about {
   @apply text-[16px] leading-[19px] sm:text-xl sm:leading-6 text-secondary-300;
+}
+
+.project-title {
+  transition: 0.5s ease-out;
+  @apply font-bold text-[16px] leading-[19px] text-secondary-400 text-center mb-2;
+}
+
+.image-overlay {
+  @apply opacity-0 absolute top-0 left-0 w-full h-full bg-primary-200 bg-opacity-[15%] transition duration-500 ease-linear pointer-events-none;
+}
+
+.project-link:hover .project-title {
+  @apply text-primary-200;
+}
+
+.project-link:hover .image-overlay,
+.project-link:hover svg {
+  @apply opacity-100;
+}
+
+.project-link:hover img {
+  @apply scale-[120%];
+}
+
+.project-grid-column {
+  @apply grid grid-cols-1 xs:grid-cols-[1fr_auto_1fr] gap-6;
 }
