@@ -3,16 +3,29 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset'
   endIcon?: React.ReactNode
   variant?: 'contained' | 'outlined'
+  className?: string
+  size?: 'small' | 'medium' | 'large'
 }
 
 const Button = ({
   children,
   type = 'button',
   endIcon,
-  variant = 'contained'
+  variant = 'contained',
+  className,
+  size = 'medium'
 }: ButtonProps) => {
+  const buttonSizeClasses = {
+    small: 'h-[40px] text-[16px] leading-[19px]',
+    medium: 'h-[48px] text-[16px] leading-4',
+    large: 'h-[61px] text-2xl leading-[29px]'
+  }
+
   return (
-    <button className={`button button-${variant}`} type={type}>
+    <button
+      className={`button button-${variant} ${buttonSizeClasses[size]} ${className} font-bold w-full`}
+      type={type}
+    >
       {children}
       {endIcon}
     </button>
