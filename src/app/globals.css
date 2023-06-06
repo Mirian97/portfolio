@@ -22,7 +22,7 @@ body {
 
 .button {
   transition: all 0.3s ease-in-out;
-  @apply font-bold text-2xl leading-[29px] w-full min-h-[61px] rounded-full flex flex-row justify-center items-center gap-1 border-[3px] border-solid border-primary-200;
+  @apply rounded-full flex flex-row justify-center items-center gap-1 border-[3px] border-solid border-primary-200;
 }
 
 .button path {
