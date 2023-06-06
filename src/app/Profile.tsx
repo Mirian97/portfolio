@@ -93,10 +93,12 @@ const Profile = () => {
           href='https://wa.me/11962659170?text=Ol%C3%A1,%20pode%20me%20ajudar?'
           target='_blank'
         >
-          <Button endIcon={<WhatsappIcon height={21} />}>Me Contratar</Button>
+          <Button endIcon={<WhatsappIcon height={21} />} size='large'>
+            Me Contratar
+          </Button>
         </Link>
         <a href='/pdf/Mirian Quispe - CV.pdf' download>
-          <Button endIcon={<ClipIcon height={21} />} variant='outlined'>
+          <Button endIcon={<ClipIcon height={21} />} variant='outlined' size='large'>
             Baixar CV
           </Button>
         </a>
