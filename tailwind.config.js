@@ -10,7 +10,8 @@ module.exports = {
     extend: {
       boxShadow: {
         100: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-        200: '0px 0px 4px #FC9B9B'
+        200: '0px 0px 4px #FC9B9B',
+        300: ' 0px 1px 2px rgba(16, 24, 40, 0.05)'
       },
       colors: {
         primary: {
@@ -20,6 +21,7 @@ module.exports = {
         secondary: {
           25: '#F5F5F5',
           50: '#e4e4e4',
+          75: '#D0D5DD',
           100: '#667085',
           200: '#344054',
           300: '#8E8E8E',
