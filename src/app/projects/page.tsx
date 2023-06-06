@@ -22,23 +22,17 @@ const Projects = () => {
         <div className='project-grid-column'>
           <ProjectItem {...projects[0]} />
           {renderVerticalDivider}
-          <ProjectItem {...projects[0]} />
+          <ProjectItem {...projects[1]} />
         </div>
         {renderHorizontalDivider}
         <div className='project-grid-column'>
-          <ProjectItem {...projects[0]} />
+          <ProjectItem {...projects[2]} />
           {renderVerticalDivider}
-          <ProjectItem {...projects[0]} />
+          <ProjectItem {...projects[3]} />
         </div>
         {renderHorizontalDivider}
         <div className='project-grid-column'>
-          <ProjectItem {...projects[0]} />
-          {renderVerticalDivider}
-          <ProjectItem {...projects[0]} />
-        </div>
-        {renderHorizontalDivider}
-        <div className='project-grid-column'>
-          <ProjectItem {...projects[0]} />
+          <ProjectItem {...projects[4]} />
         </div>
         {renderHorizontalDivider}
       </div>
