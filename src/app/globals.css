@@ -127,3 +127,7 @@ textarea {
 .error-input {
   @apply border-primary-100 shadow-400 focus-within:border-primary-100;
 }
+
+.subtitle {
+  @apply font-bold text-2xl leading-[29px] text-secondary-400;
+}
