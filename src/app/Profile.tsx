@@ -104,7 +104,7 @@ const Profile = () => {
       <img
         src='/gif/cat.gif'
         alt='Gif de um gato'
-        className='self-center mb-0 sm:mb-[-32px] max-w-[206px]'
+        className='self-center mb-[-3px] sm:mb-[-35px] max-w-[206px]'
       />
     </section>
   )
