@@ -36,7 +36,7 @@ const Menu = () => {
   )
 
   return (
-    <nav className='bg-white border-[3px] border-solid border-secondary-50 rounded-[28px] rounded-b-none sm:rounded-[28px] sm:border-r-0 sm:rounded-r-none py-4 sm:py-6 sm:px-2 sm:mt-7 fixed z-[1] sm:z-0 sm:static bottom-0 left-0 right-0 flex flex-row justify-evenly items-center sm:flex-col sm:justify-center sm:gap-6'>
+    <nav className='bg-white border-[3px] border-solid border-secondary-50 rounded-[28px] rounded-b-none sm:rounded-[28px] sm:border-r-0 sm:rounded-r-none py-4 sm:py-6 sm:px-2 sm:mt-7 fixed z-[2] sm:z-0 sm:static bottom-0 left-0 right-0 flex flex-row justify-evenly items-center sm:flex-col sm:justify-center sm:gap-6'>
       {menuList.map(({ menuLabel, path, menuIcon, targetSegment }, index) => (
         <Fragment key={index}>
           <Link
