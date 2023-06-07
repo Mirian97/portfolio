@@ -4,16 +4,22 @@ import InfoItem from '@/components/InfoItem'
 import Subtitle from '@/components/Subtitle'
 import Title from '@/components/Title'
 import { contactInfoList } from '@/constants/contact'
+import { errorModalContent, successModalContent } from '@/constants/modal'
 import { contactSchema, contactSchemaType } from '@/schemas/contactSchema'
+import emailjs from '@emailjs/browser'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import EmailIcon from '~/svg/email-icon.svg'
 import Input from './Input'
+import Modal from './Modal'
 import TextArea from './TextArea'
 
 const Contact = () => {
+  const [openModal, setOpenModal] = useState(false)
+  const [modalContent, setModalContent] = useState({ ...successModalContent })
+  const closeModal = () => setOpenModal(false)
   const {
-    setValue,
     reset,
     register,
     handleSubmit,
@@ -22,8 +28,22 @@ const Contact = () => {
 
   const onSubmit: SubmitHandler<contactSchemaType> = async (data) => {
     try {
+      const templateParams = {
+        ...data
+      }
+      await emailjs.send(
+        'service_5ji5v6f',
+        'template_7zxwd2f',
+        templateParams,
+        'q1BnU3ikmvGhaKn7v'
+      )
       reset()
-    } catch (error) {}
+      setModalContent({ ...successModalContent })
+      setOpenModal(true)
+    } catch (error) {
+      setModalContent({ ...errorModalContent })
+      setOpenModal(true)
+    }
   }
 
   const renderContactForm = () => (
@@ -32,9 +52,9 @@ const Contact = () => {
         <Input
           label='Nome *'
           placeholder='Exe.: João Aparecido'
-          {...register('name')}
-          error={Boolean(errors.name)}
-          errorMessage={errors.name?.message}
+          {...register('from_name')}
+          error={Boolean(errors.from_name)}
+          errorMessage={errors.from_name?.message}
         />
         <Input
           label='Assunto'
@@ -77,6 +97,7 @@ const Contact = () => {
       </div>
       <Subtitle content='Me envie um e-mail!' dividerHeight='thin' />
       {renderContactForm()}
+      <Modal openModal={openModal} closeModal={closeModal} {...modalContent} />
     </>
   )
 }
