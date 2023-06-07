@@ -1,9 +1,10 @@
-interface ButtonProps {
+import { ButtonHTMLAttributes } from 'react'
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode
   type?: 'button' | 'submit' | 'reset'
   endIcon?: React.ReactNode
   variant?: 'contained' | 'outlined'
-  className?: string
   size?: 'small' | 'medium' | 'large'
 }
 
@@ -13,7 +14,8 @@ const Button = ({
   endIcon,
   variant = 'contained',
   className,
-  size = 'medium'
+  size = 'medium',
+  onClick
 }: ButtonProps) => {
   const buttonSizeClasses = {
     small: 'h-[40px] text-[16px] leading-[19px]',
@@ -25,6 +27,7 @@ const Button = ({
     <button
       className={`button button-${variant} ${buttonSizeClasses[size]} ${className} font-bold w-full`}
       type={type}
+      onClick={onClick}
     >
       {children}
       {endIcon}
