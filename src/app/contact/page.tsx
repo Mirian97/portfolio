@@ -11,11 +11,6 @@ import EmailIcon from '~/svg/email-icon.svg'
 import Input from './Input'
 import TextArea from './TextArea'
 
-export const metadata = {
-  title: 'Portfólio | Contato',
-  description: 'Portfólio pessoal de Mirian Quispe'
-}
-
 const Contact = () => {
   const {
     setValue,
