@@ -9,6 +9,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import EmailIcon from '~/svg/email-icon.svg'
 import Input from './Input'
+import TextArea from './TextArea'
 
 export const metadata = {
   title: 'Portfólio | Contato',
@@ -17,6 +18,7 @@ export const metadata = {
 
 const Contact = () => {
   const {
+    setValue,
     reset,
     register,
     handleSubmit,
@@ -25,12 +27,49 @@ const Contact = () => {
 
   const onSubmit: SubmitHandler<contactSchemaType> = async (data) => {
     try {
-      console.log(data)
       reset()
-    } catch (error) {
-      console.log(error)
-    }
+    } catch (error) {}
   }
+
+  const renderContactForm = () => (
+    <form onSubmit={handleSubmit(onSubmit)} className='mt-8 grid grid-cols-1 gap-4'>
+      <div className='flex flex-col gap-4 sm:flex-row'>
+        <Input
+          label='Nome *'
+          placeholder='Exe.: João Aparecido'
+          {...register('name')}
+          error={Boolean(errors.name)}
+          errorMessage={errors.name?.message}
+        />
+        <Input
+          label='Assunto'
+          placeholder='Exe.: Orçamento'
+          {...register('subject')}
+          error={Boolean(errors.subject)}
+          errorMessage={errors.subject?.message}
+        />
+      </div>
+      <Input
+        label='E-mail *'
+        placeholder='joao.aparecido@gmail.com'
+        startIcon={<EmailIcon width={20} />}
+        {...register('email')}
+        error={Boolean(errors.email)}
+        errorMessage={errors.email?.message}
+      />
+      <TextArea
+        label='Mensagem *'
+        placeholder='Diga como posso te ajudar...'
+        {...register('message')}
+        error={Boolean(errors.message)}
+        errorMessage={errors.message?.message}
+        maxLength={400}
+      />
+      <Button type='submit' size='small' className='w-full sm:w-[150px] ml-auto'>
+        Enviar
+      </Button>
+    </form>
+  )
 
   return (
     <>
@@ -42,21 +81,7 @@ const Contact = () => {
         ))}
       </div>
       <Subtitle content='Me envie um e-mail!' dividerHeight='thin' />
-      <form className='mt-8 mb-6 grid grid-cols-1 gap-4'>
-        <div className='flex flex-col gap-4 sm:flex-row'>
-          <Input label='Nome *' placeholder='Exe.: João Aparecido' />
-          <Input label='Assunto' placeholder='Exe.: Orçamento' />
-        </div>
-        <Input
-          label='E-mail *'
-          placeholder='joao.aparecido@gmail.com'
-          startIcon={<EmailIcon width={20} />}
-        />
-        <Input label='Mensagem *' placeholder='Diga como posso te ajudar...' />
-        <Button type='submit' size='small' className='w-full sm:w-[150px] ml-auto'>
-          Enviar
-        </Button>
-      </form>
+      {renderContactForm()}
     </>
   )
 }
