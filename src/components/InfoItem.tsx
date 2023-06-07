@@ -6,7 +6,7 @@ interface InfoItemProps {
 
 const InfoItem = ({ name, description, className }: InfoItemProps) => {
   return (
-    <div className={`flex flex-row gap-1 items-center ${className}`}>
+    <div className={`flex flex-row gap-1 ${className}`}>
       <h5 className='text-xl leading-6 font-bold text-secondary-300 break-normal'>
         {name}:
       </h5>
