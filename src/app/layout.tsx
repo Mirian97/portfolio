@@ -14,7 +14,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <head>
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
-          href='https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;700&display=swap'
+          href='https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;700&display=swap'
           rel='stylesheet'
         />
         <link rel='icon' href='./favicon.ico' />
