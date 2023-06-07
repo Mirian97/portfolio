@@ -1,32 +1,23 @@
-import { LegacyRef, forwardRef, useId } from 'react'
+import { CommonInputProps } from '@/interfaces/CommonInputProps'
+import { InputHTMLAttributes, LegacyRef, forwardRef } from 'react'
 
-interface InputProps {
-  label: string
-  placeholder: string
-  startIcon?: React.ReactNode
-}
+type InputProps = CommonInputProps & InputHTMLAttributes<HTMLInputElement>
 
 const InputRef = (
-  { label, placeholder, startIcon }: InputProps,
+  { label, placeholder, startIcon, error, errorMessage, ...restProps }: InputProps,
   ref: LegacyRef<HTMLInputElement> | undefined
 ) => {
-  const id = useId()
-
   return (
-    <div className='flex flex-col w-full text-secondary-200'>
-      <label className='font-medium text-sm leading-5'>{label}</label>
-      <div className='min-h-[44px] shadow-300 border-[1px] border-solid border-secondary-75 rounded-lg flex flex-row items-center gap-2 w-full px-[14px] focus-within:border-secondary-200'>
+    <div className='input-container'>
+      <label>{label}</label>
+      <div className={`input ${error && 'error-input'}`}>
         {startIcon}
-        <input
-          ref={ref}
-          id={id}
-          placeholder={placeholder}
-          className='text-[16px] leading-6 w-full focus:outline-none '
-        />
+        <input ref={ref} placeholder={placeholder} type='text' {...restProps} />
       </div>
+      {error && <span className='text-red-600'>{errorMessage}</span>}
     </div>
   )
 }
 
-const Input = forwardRef(InputRef)
+const Input = forwardRef<HTMLInputElement, InputProps>(InputRef)
 export default Input
