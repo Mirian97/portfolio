@@ -13,8 +13,7 @@ const Modal = ({ openModal, closeModal, title, description }: ModalProps) => {
     const toggleBodyScroll = (toggle: boolean) => {
       document.body.style.overflow = toggle ? 'hidden' : 'auto'
     }
-    if (openModal) toggleBodyScroll(true)
-    return () => toggleBodyScroll(false)
+    toggleBodyScroll(openModal)
   }, [openModal])
 
   return (
