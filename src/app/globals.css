@@ -127,3 +127,7 @@ textarea {
 .error-input {
   @apply border-primary-100 shadow-400 focus-within:border-primary-100;
 }
+
+.social-media-icon {
+  @apply w-[30px] sm:w-10;
+}
