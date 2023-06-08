@@ -1,5 +1,5 @@
 import { CommonInputProps } from '@/interfaces/CommonInputProps'
-import { InputHTMLAttributes, LegacyRef, forwardRef } from 'react'
+import { InputHTMLAttributes, LegacyRef, forwardRef, useId } from 'react'
 
 type InputProps = CommonInputProps & InputHTMLAttributes<HTMLInputElement>
 
@@ -7,12 +7,13 @@ const InputRef = (
   { label, placeholder, startIcon, error, errorMessage, ...restProps }: InputProps,
   ref: LegacyRef<HTMLInputElement> | undefined
 ) => {
+  const id = useId()
   return (
     <div className='input-container'>
-      <label>{label}</label>
+      <label htmlFor={id}>{label}</label>
       <div className={`input ${error && 'error-input'}`}>
         {startIcon}
-        <input ref={ref} placeholder={placeholder} type='text' {...restProps} />
+        <input id={id} ref={ref} placeholder={placeholder} type='text' {...restProps} />
       </div>
       {error && <span className='text-red-600'>{errorMessage}</span>}
     </div>
