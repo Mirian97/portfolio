@@ -1,5 +1,6 @@
 import { CommonInputProps } from '@/interfaces/CommonInputProps'
-import { LegacyRef, TextareaHTMLAttributes, forwardRef, useEffect, useState } from 'react'
+import getCharactersRemaining from '@/utils/getCharactersRemaining'
+import { LegacyRef, TextareaHTMLAttributes, forwardRef, useId } from 'react'
 
 type TextAreaProps = CommonInputProps & TextareaHTMLAttributes<HTMLTextAreaElement>
 
@@ -11,46 +12,33 @@ const TextAreaRef = (
     error,
     errorMessage,
     maxLength,
+    value,
     ...restProps
   }: TextAreaProps,
   ref: LegacyRef<HTMLTextAreaElement> | undefined
 ) => {
-  const [typedValue, setTypedValue] = useState('')
-
-  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setTypedValue(event.target.value)
-  }
-
-  const charactersRemaining = maxLength ? maxLength - typedValue.length : undefined
-
-  useEffect(() => {
-    if (!errorMessage) {
-      setTypedValue('')
-    }
-  }, [errorMessage, maxLength, typedValue])
-
+  const id = useId()
+  const charactersRemaining = getCharactersRemaining(maxLength, value)
   return (
     <div className='input-container'>
-      <label>{label}</label>
+      <label htmlFor={id}>{label}</label>
       <div className={`input ${error && 'error-input'}`}>
         {startIcon}
         <textarea
+          id={id}
           ref={ref}
           placeholder={placeholder}
           className='py-3 min-h-[154px] resize-none'
           {...restProps}
-          onChange={handleChange}
           maxLength={maxLength}
         />
       </div>
-      <div className='flex flex-row justify-between gap-1'>
-        {charactersRemaining && (
-          <span className='text-secondary-150'>
-            {charactersRemaining} caracteres restantes
-          </span>
-        )}
-        {error && <span className='text-red-600'>{errorMessage}</span>}
-      </div>
+      {error && <span className='text-red-600'>{errorMessage}</span>}
+      {maxLength && value !== undefined && (
+        <span className='text-secondary-150'>
+          {charactersRemaining} caracteres restantes
+        </span>
+      )}
     </div>
   )
 }

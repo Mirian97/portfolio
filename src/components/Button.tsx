@@ -18,9 +18,9 @@ const Button = ({
   onClick
 }: ButtonProps) => {
   const buttonSizeClasses = {
-    small: 'h-[40px] text-[16px] leading-[19px]',
-    medium: 'h-[48px] text-[16px] leading-4',
-    large: 'h-[61px] text-2xl leading-[29px]'
+    small: 'h-[40px] text-[16px]',
+    medium: 'h-[48px] text-[16px]',
+    large: 'h-[61px] text-2xl'
   }
 
   return (

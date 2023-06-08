@@ -22,9 +22,12 @@ const Contact = () => {
   const {
     reset,
     register,
+    watch,
+    setValue,
     handleSubmit,
     formState: { errors }
   } = useForm<contactSchemaType>({ resolver: yupResolver(contactSchema) })
+  const messageValue = watch('message') || ''
 
   const onSubmit: SubmitHandler<contactSchemaType> = async (data) => {
     try {
@@ -79,6 +82,8 @@ const Contact = () => {
         error={Boolean(errors.message)}
         errorMessage={errors.message?.message}
         maxLength={400}
+        value={messageValue}
+        onChange={(e) => setValue('message', e.target.value)}
       />
       <Button type='submit' size='small' className='w-full sm:w-[150px] ml-auto'>
         Enviar

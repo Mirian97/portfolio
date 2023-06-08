@@ -14,7 +14,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <head>
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
-          href='https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;700&display=swap'
+          href='https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;700&display=swap'
           rel='stylesheet'
         />
         <link rel='icon' href='./favicon.ico' />
@@ -22,7 +22,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body className='flex flex-col pt-8 m-auto sm:flex-row sm:items-start sm:pl-5 sm:pt-16 md:pl-[119px] lg:justify-center lg:max-w-[1440px] lg:pl-0'>
         <Menu />
         <Profile />
-        <section className='card mt-8 mb-[127px] sm:mt-12 px-6 pb-8 sm:px-10 sm:h-[1100px] rounded-[28px] sm:rounded-none sm:border-l-0 lg:rounded-[28px] lg:rounded-l-none w-full overflow-auto'>
+        <section className='card mt-8 mb-[127px] sm:mt-12 px-6 pb-8 sm:px-10 sm:h-[1100px] rounded-[28px] sm:rounded-none sm:border-l-0 lg:rounded-[28px] lg:rounded-l-none w-full overflow-y-auto overflow-x-hidden'>
           {children}
         </section>
       </body>
