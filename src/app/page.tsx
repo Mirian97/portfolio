@@ -1,3 +1,4 @@
+import InfoItem from '@/components/InfoItem'
 import ProjectDivider from '@/components/ProjectDivider'
 import Subtitle from '@/components/Subtitle'
 import Title from '@/components/Title'
@@ -22,11 +23,8 @@ const About = () => (
       ))}
     </section>
     <section className='hidden sm:flex flex-row justify-between mb-8'>
-      {locationAndAvailability.map(({ name, description }) => (
-        <div key={name} className='flex flex-row gap-1'>
-          <h5 className='text-about font-bold break-normal'>{name}:</h5>
-          <h5 className='text-xl leading-6 text-success-200'>{description}</h5>
-        </div>
+      {locationAndAvailability.map((item, index) => (
+        <InfoItem key={index} {...item} />
       ))}
     </section>
     <Subtitle content='Curiosidades' dividerHeight='thin' />
