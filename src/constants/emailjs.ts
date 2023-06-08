@@ -1,7 +1,3 @@
-const emailCredentials = {
-  serviceId: 'service_5ji5v6f',
-  templateId: 'template_7zxwd2f',
-  apiKey: 'q1BnU3ikmvGhaKn7v'
-}
-
-export default emailCredentials
+export const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID as string
+export const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID as string
+export const apiKey = process.env.NEXT_PUBLIC_API_KEY as string
