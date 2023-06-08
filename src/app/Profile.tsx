@@ -15,12 +15,12 @@ import TypingEffect from './TypingEffect'
 const socialMedia = [
   {
     name: 'Github',
-    icon: <GithubIcon width={40} />,
+    icon: <GithubIcon className='social-media-icon' />,
     link: 'https://github.com/Mirian97'
   },
   {
     name: 'LinkedIn',
-    icon: <LinkedinIcon width={40} />,
+    icon: <LinkedinIcon className='social-media-icon' />,
     link: 'https://www.linkedin.com/in/dev-mirian-quispe/'
   }
 ]
@@ -28,8 +28,11 @@ const stacks = ['Full-Stack', 'Frontend', 'Backend']
 
 const Profile = () => {
   const renderAvatarSection = () => (
-    <section className='sm:min-h-[348px] sm:max-w-[424px] flex flex-col items-center sm:flex-row sm:gap-3 sm:justify-center m-auto relative'>
-      <KeyLeft className='hidden sm:flex sm:w-[13%] sm:self-start' />
+    <section className='sm:min-h-[348px] sm:max-w-[424px] flex flex-col items-center sm:flex-row sm:justify-center m-auto relative'>
+      <KeyLeft
+        height={118}
+        className='hidden sm:flex sm:w-[13%] sm:self-start sm:mr-[13px]'
+      />
       <img
         src='/image/avatar.png'
         alt='Avatar'
@@ -39,25 +42,30 @@ const Profile = () => {
         height={17}
         className='hidden sm:flex sm:absolute sm:bottom-8 sm:right-[82px]'
       />
-      <KeyRight className='hidden sm:flex sm:w-[13%] sm:mt-[224px]' />
+      <KeyRight
+        height={118}
+        className='hidden sm:flex sm:w-[13%] sm:mt-[224px] sm:ml-[6px]'
+      />
       <div className='sm:hidden flex flex-row gap-[14px] items-center mt-2'>
-        <KeyLeft width={33} />
+        <KeyLeft height={60} width={33} />
         <Dots height={12} />
-        <KeyRight width={33} />
+        <KeyRight height={60} width={33} />
       </div>
     </section>
   )
 
   const renderTitleAndSocialMedia = () => (
     <section className='mt-6 mb-8 sm:my-8 sm:ml-[58px]'>
-      <h1 className='text-2xl text-primary-200 mb-[10px]'>Olá, sou Mirian Quispe e...</h1>
-      <h1 className='text-5xl text-secondary-400 font-bold leading-[58px]'>
+      <h1 className='text-[16px] leading-[19px] text-primary-200 sm:text-2xl sm:leading-[29px] sm:mb-[10px]'>
+        Olá, sou Mirian Quispe e...
+      </h1>
+      <h1 className='font-bold text-secondary-400 text-4xl leading-[43px] sm:text-5xl sm:leading-[58px]'>
         Desenvolvedora
       </h1>
-      <h1 className='text-4xl font-medium text-primary-200 leading-[48px]'>
+      <h1 className='font-medium text-primary-200 text-[32px] leading-[38px] sm:text-[40px] sm:leading-[48px]'>
         <TypingEffect textToBeTyped={stacks} />
       </h1>
-      <div className='flex flex-row gap-4 mt-4 sm:mt-5'>
+      <div className='flex flex-row mt-4 gap-2 sm:mt-6 sm:gap-4'>
         {socialMedia.map(({ name, link, icon }) => (
           <a key={name} href={link} target='_blank' className='social-media'>
             {icon}
@@ -70,7 +78,7 @@ const Profile = () => {
   const renderSkills = () => (
     <section className='flex flex-col items-center mb-8 sm:mb-[70px] sm:mx-6 '>
       <Subtitle content='Habilidades' />
-      <div className='flex flex-row flex-wrap justify-center gap-6 w-full mt-6 sm:mt-8'>
+      <div className='flex flex-row flex-wrap justify-center gap-3 sm:gap-6 w-full mt-6 sm:mt-8'>
         {skills.map(({ name, site, iconSource }) => (
           <a
             key={name}
@@ -79,7 +87,11 @@ const Profile = () => {
             rel='noreferrer'
             className='cursor-pointer'
           >
-            <img alt={name} src={iconSource} />
+            <img
+              alt={name}
+              src={iconSource}
+              className='w-[35px] sm:w-12 transform ease-in-out duration-300 hover:scale-[120%]'
+            />
           </a>
         ))}
       </div>
@@ -106,7 +118,7 @@ const Profile = () => {
       <img
         src='/gif/cat.gif'
         alt='Gif de um gato'
-        className='self-center mb-[-3px] sm:mb-[-35px] max-w-[206px]'
+        className='self-center mb-[-2px] sm:mb-[-34px] max-w-[206px]'
       />
     </section>
   )
