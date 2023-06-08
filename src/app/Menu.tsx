@@ -6,25 +6,24 @@ import AboutMenuIcon from '~/svg/about-menu-icon.svg'
 import ContactMenuIcon from '~/svg/contact-menu-icon.svg'
 import ProjectsMenuIcon from '~/svg/projects-menu-icon.svg'
 
-const iconWidth = 30
 const menuList = [
   {
     menuLabel: 'Sobre',
-    path: '/',
-    targetSegment: null,
-    menuIcon: <AboutMenuIcon width={iconWidth} />
+    path: '/sobre',
+    targetSegment: 'sobre',
+    menuIcon: <AboutMenuIcon className='menu-item-icon' />
   },
   {
     menuLabel: 'Projetos',
-    path: '/projects',
-    targetSegment: 'projects',
-    menuIcon: <ProjectsMenuIcon width={iconWidth} />
+    path: '/projetos',
+    targetSegment: 'projetos',
+    menuIcon: <ProjectsMenuIcon className='menu-item-icon' />
   },
   {
     menuLabel: 'Contato',
-    path: '/contact',
-    targetSegment: 'contact',
-    menuIcon: <ContactMenuIcon width={iconWidth} />
+    path: '/contato',
+    targetSegment: 'contato',
+    menuIcon: <ContactMenuIcon className='menu-item-icon' />
   }
 ]
 
