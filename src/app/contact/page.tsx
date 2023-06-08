@@ -4,6 +4,7 @@ import InfoItem from '@/components/InfoItem'
 import Subtitle from '@/components/Subtitle'
 import Title from '@/components/Title'
 import { contactInfoList } from '@/constants/contact'
+import emailCredentials from '@/constants/emailjs'
 import { errorModalContent, successModalContent } from '@/constants/modal'
 import { contactSchema, contactSchemaType } from '@/schemas/contactSchema'
 import emailjs from '@emailjs/browser'
@@ -14,6 +15,7 @@ import EmailIcon from '~/svg/email-icon.svg'
 import Input from './Input'
 import Modal from './Modal'
 import TextArea from './TextArea'
+const { serviceId, templateId, apiKey } = emailCredentials
 
 const Contact = () => {
   const [openModal, setOpenModal] = useState(false)
@@ -31,15 +33,7 @@ const Contact = () => {
 
   const onSubmit: SubmitHandler<contactSchemaType> = async (data) => {
     try {
-      const templateParams = {
-        ...data
-      }
-      await emailjs.send(
-        'service_5ji5v6f',
-        'template_7zxwd2f',
-        templateParams,
-        'q1BnU3ikmvGhaKn7v'
-      )
+      await emailjs.send(serviceId, templateId, data, apiKey)
       reset()
       setModalContent({ ...successModalContent })
       setOpenModal(true)
