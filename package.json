@@ -28,6 +28,7 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
-    "@svgr/webpack": "^8.0.1"
+    "@svgr/webpack": "^8.0.1",
+    "@types/yup": "^0.32.0"
   }
 }
