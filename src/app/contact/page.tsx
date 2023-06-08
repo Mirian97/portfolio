@@ -4,9 +4,10 @@ import InfoItem from '@/components/InfoItem'
 import Subtitle from '@/components/Subtitle'
 import Title from '@/components/Title'
 import { contactInfoList } from '@/constants/contact'
-import emailCredentials from '@/constants/emailjs'
+import { apiKey, serviceId, templateId } from '@/constants/emailjs'
 import { errorModalContent, successModalContent } from '@/constants/modal'
 import { contactSchema, contactSchemaType } from '@/schemas/contactSchema'
+import checkSchemaType from '@/utils/checkSchemaType'
 import emailjs from '@emailjs/browser'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useState } from 'react'
@@ -15,7 +16,6 @@ import EmailIcon from '~/svg/email-icon.svg'
 import Input from './Input'
 import Modal from './Modal'
 import TextArea from './TextArea'
-const { serviceId, templateId, apiKey } = emailCredentials
 
 const Contact = () => {
   const [openModal, setOpenModal] = useState(false)
@@ -51,14 +51,14 @@ const Contact = () => {
           placeholder='Exe.: João Aparecido'
           {...register('from_name')}
           error={Boolean(errors.from_name)}
-          errorMessage={errors.from_name?.message}
+          errorMessage={checkSchemaType(errors.from_name?.message)}
         />
         <Input
           label='Assunto'
           placeholder='Exe.: Orçamento'
           {...register('subject')}
           error={Boolean(errors.subject)}
-          errorMessage={errors.subject?.message}
+          errorMessage={checkSchemaType(errors.subject?.message)}
         />
       </div>
       <Input
@@ -67,14 +67,14 @@ const Contact = () => {
         startIcon={<EmailIcon width={20} />}
         {...register('email')}
         error={Boolean(errors.email)}
-        errorMessage={errors.email?.message}
+        errorMessage={checkSchemaType(errors.email?.message)}
       />
       <TextArea
         label='Mensagem *'
         placeholder='Diga como posso te ajudar...'
         {...register('message')}
         error={Boolean(errors.message)}
-        errorMessage={errors.message?.message}
+        errorMessage={checkSchemaType(errors.message?.message)}
         maxLength={400}
         value={messageValue}
         onChange={(e) => setValue('message', e.target.value)}
