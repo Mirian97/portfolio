@@ -22,7 +22,6 @@ const Button = ({
     medium: 'h-[48px] text-[16px]',
     large: 'h-[61px] text-2xl'
   }
-
   return (
     <button
       className={`button button-${variant} ${buttonSizeClasses[size]} ${className} font-bold w-full`}
