@@ -63,7 +63,6 @@ body {
 }
 
 .menu-item {
-  transition: all 0.3s ease-in-out;
   word-break: normal;
   @apply flex flex-col justify-center items-center gap-1 w-[89px] text-secondary-400 text-[16px] font-bold hover:text-primary-200;
 }
