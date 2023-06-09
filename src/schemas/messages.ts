@@ -1,7 +1,8 @@
 const messages = {
   fieldRequired: 'Este campo é obrigatório',
   invalidEmail: 'Digite um e-mail válido',
-  invalidCharacterLength: 'Este campo deve ter no máximo 400 caracteres'
+  minimumNumberOfCharacters: 'Por favor, insira pelo menos 100 caracteres',
+  maximumNumberOfCharacters: 'Por favor, insira no máximo 1000 caracteres'
 }
 
 export default messages
