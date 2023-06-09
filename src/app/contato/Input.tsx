@@ -11,7 +11,7 @@ const InputRef = (
   return (
     <div className='input-container'>
       <label htmlFor={id}>{label}</label>
-      <div className={`input ${error && 'error-input'}`}>
+      <div className={`input ${error && 'error-input'} px-[14px]`}>
         {startIcon}
         <input id={id} ref={ref} placeholder={placeholder} type='text' {...restProps} />
       </div>

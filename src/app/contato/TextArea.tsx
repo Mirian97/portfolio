@@ -1,5 +1,5 @@
 import { CommonInputProps } from '@/interfaces/CommonInputProps'
-import getCharactersRemaining from '@/utils/getCharactersRemaining'
+import renderCharacterText from '@/utils/renderCharacterText'
 import { LegacyRef, TextareaHTMLAttributes, forwardRef, useId } from 'react'
 
 type TextAreaProps = CommonInputProps & TextareaHTMLAttributes<HTMLTextAreaElement>
@@ -11,14 +11,12 @@ const TextAreaRef = (
     startIcon,
     error,
     errorMessage,
-    maxLength,
     value,
     ...restProps
   }: TextAreaProps,
   ref: LegacyRef<HTMLTextAreaElement> | undefined
 ) => {
   const id = useId()
-  const charactersRemaining = getCharactersRemaining(maxLength, value)
   return (
     <div className='input-container'>
       <label htmlFor={id}>{label}</label>
@@ -28,16 +26,13 @@ const TextAreaRef = (
           id={id}
           ref={ref}
           placeholder={placeholder}
-          className='py-3 min-h-[154px] resize-none'
+          className='py-3 px-[14px] min-h-[154px]'
           {...restProps}
-          maxLength={maxLength}
         />
       </div>
       {error && <span className='text-red-600'>{errorMessage}</span>}
-      {maxLength && value !== undefined && (
-        <span className='text-secondary-150'>
-          {charactersRemaining} caracteres restantes
-        </span>
+      {typeof value === 'string' && (
+        <span className='text-secondary-150'>{renderCharacterText(value.length)}</span>
       )}
     </div>
   )

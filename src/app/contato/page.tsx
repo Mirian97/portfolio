@@ -75,7 +75,6 @@ const Contact = () => {
         {...register('message')}
         error={Boolean(errors.message)}
         errorMessage={checkSchemaType(errors.message?.message)}
-        maxLength={400}
         value={messageValue}
         onChange={(e) => setValue('message', e.target.value)}
       />

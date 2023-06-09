@@ -115,16 +115,16 @@ body {
 }
 
 .input-container label {
-  @apply font-medium text-sm leading-5;
+  @apply font-medium text-sm leading-5 cursor-pointer;
 }
 
 .input-container input,
 textarea {
-  @apply text-[16px] leading-6 w-full focus:outline-none;
+  @apply text-[16px] leading-6 w-full focus:outline-none rounded-lg;
 }
 
 .input {
-  @apply min-h-[44px] shadow-300 border-[1px] border-solid border-secondary-75 rounded-lg flex flex-row items-center gap-2 w-full px-[14px];
+  @apply min-h-[44px] shadow-300 border-[1px] border-solid border-secondary-75 rounded-lg flex flex-row items-center gap-2 w-full;
 }
 
 .error-input {
