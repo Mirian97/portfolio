@@ -134,3 +134,7 @@ textarea {
 .social-media-icon {
   @apply w-[30px] sm:w-10;
 }
+
+.subtitle {
+  @apply font-bold text-2xl leading-[29px] text-secondary-400;
+}
