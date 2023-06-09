@@ -8,7 +8,7 @@ const {
 } = messages
 
 export const contactSchema = Yup.object().shape({
-  name: Yup.string().required(fieldRequired).trim(),
+  from_name: Yup.string().required(fieldRequired).trim(),
   subject: Yup.string().trim(),
   email: Yup.string().email(invalidEmail).required(fieldRequired).trim(),
   message: Yup.string()

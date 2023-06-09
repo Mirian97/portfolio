@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@hookform/resolvers": "^3.1.0",
     "@types/node": "20.2.5",
     "@types/react": "18.2.7",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
+    "dotenv": "^16.1.4",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
     "next": "^13.4.4",
@@ -27,6 +29,8 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
-    "@svgr/webpack": "^8.0.1"
+    "@svgr/webpack": "^8.0.1",
+    "@types/dotenv": "^8.2.0",
+    "@types/yup": "^0.32.0"
   }
 }
