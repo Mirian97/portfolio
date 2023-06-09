@@ -10,7 +10,6 @@ const TextAreaRef = (
     startIcon,
     error,
     errorMessage,
-    maxLength,
     value,
     ...restProps
   }: TextAreaProps,
@@ -28,7 +27,6 @@ const TextAreaRef = (
           placeholder={placeholder}
           className='py-3 px-[14px] min-h-[154px]'
           {...restProps}
-          maxLength={maxLength}
         />
       </div>
       {error && <span className='text-red-600'>{errorMessage}</span>}
