@@ -59,7 +59,7 @@ const skills = [
   },
   {
     name: 'Express',
-    site: 'https://express.com/',
+    site: 'https://expressjs.com/pt-br/',
     iconSource: skillIcons.express
   },
   {
