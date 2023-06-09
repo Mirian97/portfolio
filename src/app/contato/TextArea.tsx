@@ -1,4 +1,5 @@
 import { CommonInputProps } from '@/interfaces/CommonInputProps'
+import renderCharacterText from '@/utils/renderCharacterText'
 import { LegacyRef, TextareaHTMLAttributes, forwardRef, useId } from 'react'
 
 type TextAreaProps = CommonInputProps & TextareaHTMLAttributes<HTMLTextAreaElement>
@@ -31,7 +32,7 @@ const TextAreaRef = (
       </div>
       {error && <span className='text-red-600'>{errorMessage}</span>}
       {typeof value === 'string' && (
-        <span className='text-secondary-150'>{value.length} caracteres</span>
+        <span className='text-secondary-150'>{renderCharacterText(value.length)}</span>
       )}
     </div>
   )
