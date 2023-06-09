@@ -60,7 +60,7 @@ const Contact = () => {
         {...register('message')}
         error={Boolean(errors.message)}
         errorMessage={errors.message?.message}
-        maxLength={400}
+        maxLength={1000}
         value={messageValue}
         onChange={(e) => setValue('message', e.target.value)}
       />
