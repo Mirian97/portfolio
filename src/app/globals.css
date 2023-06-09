@@ -77,6 +77,10 @@ body {
   @apply fill-current;
 }
 
+.menu-item-icon {
+  @apply w-5 sm:w-[30px];
+}
+
 .text-about {
   @apply text-[16px] leading-[19px] sm:text-xl sm:leading-6 text-secondary-300;
 }
