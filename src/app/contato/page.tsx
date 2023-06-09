@@ -4,14 +4,23 @@ import InfoItem from '@/components/InfoItem'
 import Subtitle from '@/components/Subtitle'
 import Title from '@/components/Title'
 import { contactInfoList } from '@/constants/contact'
+import { apiKey, serviceId, templateId } from '@/constants/emailjs'
+import { errorModalContent, successModalContent } from '@/constants/modal'
 import { contactSchema, contactSchemaType } from '@/schemas/contactSchema'
+import checkSchemaType from '@/utils/checkSchemaType'
+import emailjs from '@emailjs/browser'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import EmailIcon from '~/svg/email-icon.svg'
 import Input from './Input'
+import Modal from './Modal'
 import TextArea from './TextArea'
 
 const Contact = () => {
+  const [openModal, setOpenModal] = useState(false)
+  const [modalContent, setModalContent] = useState({ ...successModalContent })
+  const closeModal = () => setOpenModal(false)
   const {
     reset,
     register,
@@ -24,8 +33,14 @@ const Contact = () => {
 
   const onSubmit: SubmitHandler<contactSchemaType> = async (data) => {
     try {
+      await emailjs.send(serviceId, templateId, data, apiKey)
       reset()
-    } catch (error) {}
+      setModalContent({ ...successModalContent })
+      setOpenModal(true)
+    } catch (error) {
+      setModalContent({ ...errorModalContent })
+      setOpenModal(true)
+    }
   }
 
   const renderContactForm = () => (
@@ -34,16 +49,16 @@ const Contact = () => {
         <Input
           label='Nome *'
           placeholder='Exe.: João Aparecido'
-          {...register('name')}
-          error={Boolean(errors.name)}
-          errorMessage={errors.name?.message}
+          {...register('from_name')}
+          error={Boolean(errors.from_name)}
+          errorMessage={checkSchemaType(errors.from_name?.message)}
         />
         <Input
           label='Assunto'
           placeholder='Exe.: Orçamento'
           {...register('subject')}
           error={Boolean(errors.subject)}
-          errorMessage={errors.subject?.message}
+          errorMessage={checkSchemaType(errors.subject?.message)}
         />
       </div>
       <Input
@@ -52,14 +67,14 @@ const Contact = () => {
         startIcon={<EmailIcon width={20} />}
         {...register('email')}
         error={Boolean(errors.email)}
-        errorMessage={errors.email?.message}
+        errorMessage={checkSchemaType(errors.email?.message)}
       />
       <TextArea
         label='Mensagem *'
         placeholder='Diga como posso te ajudar...'
         {...register('message')}
         error={Boolean(errors.message)}
-        errorMessage={errors.message?.message}
+        errorMessage={checkSchemaType(errors.message?.message)}
         maxLength={400}
         value={messageValue}
         onChange={(e) => setValue('message', e.target.value)}
@@ -81,6 +96,7 @@ const Contact = () => {
       </div>
       <Subtitle content='Me envie um e-mail!' dividerHeight='thin' />
       {renderContactForm()}
+      <Modal openModal={openModal} closeModal={closeModal} {...modalContent} />
     </>
   )
 }
