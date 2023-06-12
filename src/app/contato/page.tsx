@@ -44,7 +44,7 @@ const Contact = () => {
   }
 
   const renderContactForm = () => (
-    <form onSubmit={handleSubmit(onSubmit)} className='mt-8 grid grid-cols-1 gap-4'>
+    <form className='mt-8 grid grid-cols-1 gap-4'>
       <div className='flex flex-col gap-4 sm:flex-row'>
         <Input
           label='Nome *'
@@ -78,7 +78,12 @@ const Contact = () => {
         value={messageValue}
         onChange={(e) => setValue('message', e.target.value)}
       />
-      <Button type='submit' size='small' className='w-full sm:w-[150px] ml-auto'>
+      <Button
+        type='button'
+        onClick={handleSubmit(onSubmit)}
+        size='small'
+        className='w-full sm:w-[150px] ml-auto'
+      >
         Enviar
       </Button>
     </form>
