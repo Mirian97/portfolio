@@ -102,7 +102,7 @@ const Profile = () => {
     <section className='flex flex-col gap-6 sm:flex-row sm:justify-between sm:mb-8 sm:gap-6'>
       <div className='w-full flex flex-col gap-3 justify-end'>
         <Link
-          href='https://wa.me/11962659170?text=Ol%C3%A1,%20pode%20me%20ajudar?'
+          href='https://wa.me/5511962659170?text=Ol%C3%A1,%20pode%20me%20ajudar?'
           target='_blank'
         >
           <Button endIcon={<WhatsappIcon height={21} />} size='large'>
