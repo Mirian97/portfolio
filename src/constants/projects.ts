@@ -12,10 +12,29 @@ const {
   netlify,
   next,
   tailwind,
-  typescript
+  typescript,
+  mySql,
+  vercel,
+  vue
 } = skillIcons
 
 const projects = [
+  {
+    name: 'Fluxo de caixa',
+    skills: [react, javascript, html, css, mui, node, express, mySql, vercel],
+    description:
+      'Gerenciamento de fluxo de caixa, controle das entradas, saídas, clientes e categorias registradas do negócio.',
+    imagePath: '/image/cash-flow-project.png',
+    site: 'https://fluxodecaixa.nalupetvet.com.br/'
+  },
+  {
+    name: 'MiCripto',
+    skills: [vue, javascript, html, css, node, express, postgres, netlify, vercel],
+    description:
+      'Faça o cadastro e login para acessar informações atualizadas sobre as 10 melhores criptomoedas do mercado.',
+    imagePath: '/image/my-crypto-project.png',
+    site: 'https://mi-cripto.netlify.app/'
+  },
   {
     name: 'Pigback Finance',
     skills: [react, javascript, html, css, mui, node, express, postgres, netlify],
