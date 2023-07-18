@@ -18,7 +18,9 @@ export const skillIcons = {
   postgres: generateIconUrl('postgres'),
   netlify: generateIconUrl('netlify'),
   vercel: generateIconUrl('vercel'),
-  vsCode: generateIconUrl('vscode')
+  vite: generateIconUrl('vite'),
+  vue: generateIconUrl('vue'),
+  mySql: generateIconUrl('mysql')
 }
 
 const skills = [
@@ -68,6 +70,11 @@ const skills = [
     iconSource: skillIcons.next
   },
   {
+    name: 'Vue.js',
+    site: 'https://vuejs.org/',
+    iconSource: skillIcons.vue
+  },
+  {
     name: 'MUI',
     site: 'https://mui.com/',
     iconSource: skillIcons.mui
@@ -88,14 +95,19 @@ const skills = [
     iconSource: skillIcons.bootstrap
   },
   {
-    name: 'Sass',
-    site: 'https://sass-lang.com/',
-    iconSource: skillIcons.sass
-  },
-  {
     name: 'PostgreSQL',
     site: 'https://postgres.com/',
     iconSource: skillIcons.postgres
+  },
+  {
+    name: 'MySQL',
+    site: 'https://www.mysql.com/',
+    iconSource: skillIcons.mySql
+  },
+  {
+    name: 'Vite',
+    site: 'https://vitejs.dev/',
+    iconSource: skillIcons.vite
   },
   {
     name: 'Netlify',
@@ -106,11 +118,6 @@ const skills = [
     name: 'Vercel',
     site: 'https://vercel.com/',
     iconSource: skillIcons.vercel
-  },
-  {
-    name: 'VSCode',
-    site: 'https://code.visualstudio.com/docs',
-    iconSource: skillIcons.vsCode
   }
 ]
 
