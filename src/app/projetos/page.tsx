@@ -33,8 +33,13 @@ const Projects = () => {
         {renderHorizontalDivider}
         <div className='project-grid-column'>
           <ProjectItem {...projects[4]} />
+          {renderVerticalDivider}
+          <ProjectItem {...projects[5]} />
         </div>
         {renderHorizontalDivider}
+        <div className='project-grid-column'>
+          <ProjectItem {...projects[6]} />
+        </div>
       </div>
     </>
   )
