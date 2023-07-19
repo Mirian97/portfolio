@@ -124,7 +124,7 @@ const Profile = () => {
   )
 
   return (
-    <aside className='card rounded-[28px] w-full'>
+    <aside className='card rounded-[28px] w-full lg:relative lg:z-[1]'>
       {renderAvatarSection()}
       <div className='px-6 sm:px-8'>
         {renderTitleAndSocialMedia()}
