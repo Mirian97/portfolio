@@ -1,6 +1,8 @@
 'use client'
+import useWindowSize from '@/hooks/useWindowSize'
 import { AnimatePresence, motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
 const variants = {
   fadeIn: {
@@ -20,8 +22,15 @@ const variants = {
 }
 
 const SectionTransition = ({ children }: { children: React.ReactNode }) => {
+  const { width } = useWindowSize()
   const pathname = usePathname()
-  const isLargeScreen = window.innerWidth >= 1536
+  const [isLargeScreen, setIsLargeScreen] = useState(false)
+
+  useEffect(() => {
+    if (width !== undefined) {
+      setIsLargeScreen(width >= 1536)
+    }
+  }, [width])
 
   return (
     <div className='w-full'>
