@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client'
 import { useEffect, useState } from 'react'
 
@@ -12,8 +13,10 @@ const useWindowSize = () => {
         width: window.innerWidth,
         height: window.innerHeight
       })
-    window.addEventListener('resize', handleResize)
-    handleResize()
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', handleResize)
+      handleResize()
+    }
     return () => window.removeEventListener('resize', handleResize)
   }, [])
   return windowSize
