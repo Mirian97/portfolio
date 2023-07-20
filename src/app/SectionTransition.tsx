@@ -21,7 +21,7 @@ const variants = {
 
 const SectionTransition = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname()
-  const isLargeScreen = window.innerWidth >= 1536
+  const isLargeScreen = typeof window !== 'undefined' && window.innerWidth >= 1536
 
   return (
     <div className='w-full'>
