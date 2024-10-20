@@ -6,6 +6,7 @@ import Title from '@/components/Title'
 import { contactInfoList } from '@/constants/contact'
 import { apiKey, serviceId, templateId } from '@/constants/emailjs'
 import { errorModalContent, successModalContent } from '@/constants/modal'
+import SectionTransition from '@/features/SectionTransition'
 import { contactSchema, contactSchemaType } from '@/schemas/contactSchema'
 import checkSchemaType from '@/utils/checkSchemaType'
 import emailjs from '@emailjs/browser'
@@ -90,7 +91,7 @@ const Contact = () => {
   )
 
   return (
-    <>
+    <SectionTransition key='contact'>
       <Title content='Entrar em contato' />
       <div className='flex flex-col gap-2 mt-8 mb-6 sm:flex-row sm:flex-wrap sm:gap-4 sm:mt-8 sm:mb-12 sm:justify-between'>
         <InfoItem {...contactInfoList[0]} className='w-full' />
@@ -101,7 +102,7 @@ const Contact = () => {
       <Subtitle content='Me envie um e-mail!' dividerHeight='thin' />
       {renderContactForm()}
       <Modal openModal={openModal} closeModal={closeModal} {...modalContent} />
-    </>
+    </SectionTransition>
   )
 }
 

@@ -2,7 +2,6 @@ import { Sofia_Sans } from 'next/font/google'
 
 import Menu from '@/features/Menu'
 import Profile from '@/features/Profile'
-import SectionTransition from '@/features/SectionTransition'
 import { FC, PropsWithChildren } from 'react'
 import './globals.css'
 
@@ -30,7 +29,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
       >
         <Menu />
         <Profile />
-        <SectionTransition>{children}</SectionTransition>
+        {children}
       </body>
     </html>
   )

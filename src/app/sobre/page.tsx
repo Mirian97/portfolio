@@ -9,13 +9,14 @@ import {
   locationAndAvailability,
   services
 } from '@/constants/about'
+import SectionTransition from '@/features/SectionTransition'
 import ListIcon from '~/svg/list-icon.svg'
 import StarIcon from '~/svg/star-icon.svg'
 import AboutItem from '../../components/AboutItem'
 import SkillList from '../../components/SkillList'
 
 const About = () => (
-  <>
+  <SectionTransition key='about-me'>
     <Title content='Sobre mim' />
     <section className='pt-6 pb-10 sm:pt-[32px] sm:pb-[24px] flex flex-col gap-2'>
       {aboutList.map(({ name, description }) => (
@@ -38,7 +39,7 @@ const About = () => (
         <Subtitle content='Serviços' dividerHeight='thin' />
       </SkillList>
     </section>
-  </>
+  </SectionTransition>
 )
 
 export default About
