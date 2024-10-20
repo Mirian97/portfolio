@@ -5,7 +5,7 @@ import { FC, PropsWithChildren, useEffect, useState } from 'react'
 
 const SectionTransition: FC<PropsWithChildren> = ({ children }) => {
   const { width } = useWindowSize()
-  const [isLargeScreen, setIsLargeScreen] = useState(true)
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1535)
 
   useEffect(() => {
     if (width !== undefined) {
