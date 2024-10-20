@@ -1,7 +1,9 @@
 import { Sofia_Sans } from 'next/font/google'
-import Menu from './Menu'
-import Profile from './Profile'
-import SectionTransition from './SectionTransition'
+
+import Menu from '@/features/Menu'
+import Profile from '@/features/Profile'
+import SectionTransition from '@/features/SectionTransition'
+import { FC, PropsWithChildren } from 'react'
 import './globals.css'
 
 const sofiaSans = Sofia_Sans({
@@ -16,7 +18,7 @@ export const metadata = {
   description: 'Portfólio pessoal de Mirian Quispe'
 }
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
+const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang='pt-br'>
       <head>

@@ -11,8 +11,8 @@ import {
 } from '@/constants/about'
 import ListIcon from '~/svg/list-icon.svg'
 import StarIcon from '~/svg/star-icon.svg'
-import AboutItem from './AboutItem'
-import LanguageOrServiceList from './LanguageOrServiceList'
+import AboutItem from '../../components/AboutItem'
+import SkillList from '../../components/SkillList'
 
 const About = () => (
   <>
@@ -23,28 +23,20 @@ const About = () => (
       ))}
     </section>
     <section className='hidden sm:flex flex-row justify-between mb-8'>
-      {locationAndAvailability.map((item, index) => (
-        <InfoItem key={index} {...item} />
+      {locationAndAvailability.map((item) => (
+        <InfoItem key={item.description} {...item} />
       ))}
     </section>
     <Subtitle content='Curiosidades' dividerHeight='thin' />
     <p className='text-about mt-4 mb-10 sm:mb-8'>{curiosities}</p>
     <section className='flex flex-col gap-10 px-2 sm:flex-row sm:gap-1 sm:justify-between sm:items-end'>
-      <LanguageOrServiceList
-        listIcon={<ListIcon width={8} />}
-        list={languages}
-        listWidth='158px'
-      >
+      <SkillList listIcon={<ListIcon width={8} />} list={languages} listWidth='158px'>
         <Subtitle content='Idiomas' dividerHeight='thin' />
-      </LanguageOrServiceList>
+      </SkillList>
       <ProjectDivider className='hidden sm:flex' />
-      <LanguageOrServiceList
-        listIcon={<StarIcon width={12} />}
-        list={services}
-        listWidth='87px'
-      >
+      <SkillList listIcon={<StarIcon width={12} />} list={services} listWidth='87px'>
         <Subtitle content='Serviços' dividerHeight='thin' />
-      </LanguageOrServiceList>
+      </SkillList>
     </section>
   </>
 )

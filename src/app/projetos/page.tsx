@@ -1,7 +1,7 @@
 import ProjectDivider from '@/components/ProjectDivider'
 import Title from '@/components/Title'
 import projects from '@/constants/projects'
-import ProjectItem from './ProjectItem'
+import ProjectItem from '../../components/ProjectItem'
 
 export const metadata = {
   title: 'Portfólio | Projetos',
