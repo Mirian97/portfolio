@@ -5,7 +5,7 @@ import { FC, PropsWithChildren, useEffect, useState } from 'react'
 
 const SectionTransition: FC<PropsWithChildren> = ({ children }) => {
   const { width } = useWindowSize()
-  const [isLargeScreen, setIsLargeScreen] = useState(false)
+  const [isLargeScreen, setIsLargeScreen] = useState(true)
 
   useEffect(() => {
     if (width !== undefined) {
@@ -15,7 +15,7 @@ const SectionTransition: FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <div className='w-full'>
-      <AnimatePresence>
+      <AnimatePresence mode='wait'>
         <motion.section
           initial={isLargeScreen ? { width: 0 } : false}
           exit={{ width: 0 }}
@@ -24,7 +24,7 @@ const SectionTransition: FC<PropsWithChildren> = ({ children }) => {
               ? {
                   width: 'auto',
                   transition: {
-                    duration: 0.6,
+                    duration: 0.5,
                     ease: 'easeIn'
                   }
                 }
@@ -36,7 +36,7 @@ const SectionTransition: FC<PropsWithChildren> = ({ children }) => {
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
-              transition: { duration: 0.4, ease: 'easeInOut' }
+              transition: { duration: 0.4, ease: 'easeInOut', delay: 0.3 }
             }}
             exit={{ opacity: 0 }}
           >

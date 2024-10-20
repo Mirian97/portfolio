@@ -16,7 +16,7 @@ import AboutItem from '../../components/AboutItem'
 import SkillList from '../../components/SkillList'
 
 const About = () => (
-  <SectionTransition key='about-me'>
+  <SectionTransition>
     <Title content='Sobre mim' />
     <section className='pt-6 pb-10 sm:pt-[32px] sm:pb-[24px] flex flex-col gap-2'>
       {aboutList.map(({ name, description }) => (

@@ -17,7 +17,7 @@ const Projects = () => {
     <ProjectDivider orientation='horizontal' className='hidden xs:flex' />
   )
   return (
-    <SectionTransition key='projects'>
+    <SectionTransition>
       <Title content='Projetos Recentes' />
       <div className='flex flex-col gap-6 mt-8 xs:gap-[26px]'>
         <div className='project-grid-column'>
