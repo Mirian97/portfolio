@@ -1,24 +1,24 @@
 export const aboutList = [
   {
     name: 'Cargo',
-    description: 'Sou Desenvolvedora Full-Stack; 💻'
-  },
-  {
-    name: 'Formação 1',
-    description: 'Me formei em desenvolvimento Full-Stack na Cubos Academy; ✨'
+    description: 'Sou Desenvolvedora Full-Stack 💻'
   },
   {
     name: 'Experiência',
-    description: 'Atualmente trabalho como Full-Stack Júnior Freelancer; 🤸'
+    description: 'Atualmente trabalho como Desenvolvedora Frontend na Wivenn 🤸'
   },
   {
-    name: 'Estudos',
-    description: 'Também estou estudando Vue e Vuetify; 📘'
+    name: 'Formação 1',
+    description: 'Me formei em desenvolvimento Full-Stack na Cubos Academy ✨'
   },
   {
     name: 'Me pergunte',
     description:
-      'Você pode me perguntar sobre Typescript, React.JS, HTML, CSS, Node.JS, Express.JS, SQL, farei o possível para responder. 💬 😁'
+      'Você pode me perguntar sobre Typescript, React.JS, Node.JS, Express.JS e SQL, farei o possível para responder 💬 😁'
+  },
+  {
+    name: 'Estudos',
+    description: 'Também estou estudando o Framework Angular📖'
   }
 ]
 

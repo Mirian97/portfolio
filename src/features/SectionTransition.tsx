@@ -17,7 +17,7 @@ const SectionTransition: FC<PropsWithChildren> = ({ children }) => {
     <div className='w-full'>
       <AnimatePresence>
         <motion.section
-          initial={{ width: 0 }}
+          initial={isLargeScreen ? { width: 0 } : false}
           exit={{ width: 0 }}
           animate={
             isLargeScreen
@@ -36,7 +36,7 @@ const SectionTransition: FC<PropsWithChildren> = ({ children }) => {
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
-              transition: { duration: 0.4, ease: 'easeInOut', delay: 0.3 }
+              transition: { duration: 0.4, ease: 'easeInOut' }
             }}
             exit={{ opacity: 0 }}
           >
