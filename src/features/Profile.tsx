@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import TypingEffect from '@/components/TypingEffect'
 import skills from '@/constants/skills'
 import Link from 'next/link'
 import ClipIcon from '~/svg/clip-icon.svg'
@@ -10,7 +11,6 @@ import LinkedinIcon from '~/svg/linkedin-icon.svg'
 import WhatsappIcon from '~/svg/whatsapp-icon.svg'
 import Button from '../components/Button'
 import Subtitle from '../components/Subtitle'
-import TypingEffect from './TypingEffect'
 
 const socialMedia = [
   {

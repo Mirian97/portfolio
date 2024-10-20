@@ -6,6 +6,7 @@ import Title from '@/components/Title'
 import { contactInfoList } from '@/constants/contact'
 import { apiKey, serviceId, templateId } from '@/constants/emailjs'
 import { errorModalContent, successModalContent } from '@/constants/modal'
+import SectionTransition from '@/features/SectionTransition'
 import { contactSchema, contactSchemaType } from '@/schemas/contactSchema'
 import checkSchemaType from '@/utils/checkSchemaType'
 import emailjs from '@emailjs/browser'
@@ -13,9 +14,9 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import EmailIcon from '~/svg/email-icon.svg'
-import Input from './Input'
-import Modal from './Modal'
-import TextArea from './TextArea'
+import Input from '../../components/Input'
+import Modal from '../../components/Modal'
+import TextArea from '../../components/TextArea'
 
 const Contact = () => {
   const [openModal, setOpenModal] = useState(false)
@@ -90,18 +91,18 @@ const Contact = () => {
   )
 
   return (
-    <>
+    <SectionTransition>
       <Title content='Entrar em contato' />
       <div className='flex flex-col gap-2 mt-8 mb-6 sm:flex-row sm:flex-wrap sm:gap-4 sm:mt-8 sm:mb-12 sm:justify-between'>
         <InfoItem {...contactInfoList[0]} className='w-full' />
-        {contactInfoList.slice(1).map((item, index) => (
-          <InfoItem {...item} key={index} />
+        {contactInfoList.slice(1).map((item) => (
+          <InfoItem {...item} key={item.description} />
         ))}
       </div>
       <Subtitle content='Me envie um e-mail!' dividerHeight='thin' />
       {renderContactForm()}
       <Modal openModal={openModal} closeModal={closeModal} {...modalContent} />
-    </>
+    </SectionTransition>
   )
 }
 

@@ -20,7 +20,13 @@ export const skillIcons = {
   vercel: generateIconUrl('vercel'),
   vite: generateIconUrl('vite'),
   vue: generateIconUrl('vue'),
-  mySql: generateIconUrl('mysql')
+  mySql: generateIconUrl('mysql'),
+  angular: generateIconUrl('angular'),
+  jest: generateIconUrl('jest'),
+  postman: generateIconUrl('postman'),
+  vscode: generateIconUrl('vscode'),
+  git: generateIconUrl('git'),
+  github: generateIconUrl('github')
 }
 
 const skills = [
@@ -50,9 +56,29 @@ const skills = [
     iconSource: skillIcons.react
   },
   {
+    name: 'Vue.js',
+    site: 'https://vuejs.org/',
+    iconSource: skillIcons.vue
+  },
+  {
+    name: 'Next.js',
+    site: 'https://nextjs.org/',
+    iconSource: skillIcons.next
+  },
+  {
+    name: 'Angular.js',
+    site: 'https://angular.dev/',
+    iconSource: skillIcons.angular
+  },
+  {
     name: 'Redux',
     site: 'https://react-redux.js.org/',
     iconSource: skillIcons.redux
+  },
+  {
+    name: 'Jest',
+    site: 'https://jestjs.io/pt-BR/docs/getting-started',
+    iconSource: skillIcons.jest
   },
   {
     name: 'Node.js',
@@ -65,24 +91,9 @@ const skills = [
     iconSource: skillIcons.express
   },
   {
-    name: 'Next.js',
-    site: 'https://nextjs.org/',
-    iconSource: skillIcons.next
-  },
-  {
-    name: 'Vue.js',
-    site: 'https://vuejs.org/',
-    iconSource: skillIcons.vue
-  },
-  {
-    name: 'MUI',
-    site: 'https://mui.com/',
-    iconSource: skillIcons.mui
-  },
-  {
-    name: 'Styled Components',
-    site: 'https://styled-components.com/',
-    iconSource: skillIcons.styledComponents
+    name: 'Postman',
+    site: 'https://www.postman.com/',
+    iconSource: skillIcons.postman
   },
   {
     name: 'Tailwind CSS',
@@ -90,9 +101,9 @@ const skills = [
     iconSource: skillIcons.tailwind
   },
   {
-    name: 'Bootstrap',
-    site: 'https://getbootstrap.com.br/docs/4.1/getting-started/introduction/',
-    iconSource: skillIcons.bootstrap
+    name: 'MUI',
+    site: 'https://mui.com/',
+    iconSource: skillIcons.mui
   },
   {
     name: 'PostgreSQL',
@@ -105,19 +116,19 @@ const skills = [
     iconSource: skillIcons.mySql
   },
   {
-    name: 'Vite',
-    site: 'https://vitejs.dev/',
-    iconSource: skillIcons.vite
+    name: 'VSCode',
+    site: 'https://code.visualstudio.com/docs',
+    iconSource: skillIcons.vscode
   },
   {
-    name: 'Netlify',
-    site: 'https://netlify.com/',
-    iconSource: skillIcons.netlify
+    name: 'Git',
+    site: 'https://git-scm.com/doc',
+    iconSource: skillIcons.git
   },
   {
-    name: 'Vercel',
-    site: 'https://vercel.com/',
-    iconSource: skillIcons.vercel
+    name: 'Github',
+    site: 'https://github.com/Mirian97',
+    iconSource: skillIcons.github
   }
 ]
 

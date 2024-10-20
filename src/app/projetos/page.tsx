@@ -1,7 +1,8 @@
 import ProjectDivider from '@/components/ProjectDivider'
 import Title from '@/components/Title'
 import projects from '@/constants/projects'
-import ProjectItem from './ProjectItem'
+import SectionTransition from '@/features/SectionTransition'
+import ProjectItem from '../../components/ProjectItem'
 
 export const metadata = {
   title: 'Portfólio | Projetos',
@@ -16,7 +17,7 @@ const Projects = () => {
     <ProjectDivider orientation='horizontal' className='hidden xs:flex' />
   )
   return (
-    <>
+    <SectionTransition>
       <Title content='Projetos Recentes' />
       <div className='flex flex-col gap-6 mt-8 xs:gap-[26px]'>
         <div className='project-grid-column'>
@@ -41,7 +42,7 @@ const Projects = () => {
           <ProjectItem {...projects[6]} />
         </div>
       </div>
-    </>
+    </SectionTransition>
   )
 }
 

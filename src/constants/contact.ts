@@ -1,7 +1,7 @@
 export const contactInfoList = [
   {
     name: 'E-mail',
-    description: 'mirianquispe1505@gmail.com'
+    description: 'imjustmirian@gmail.com'
   },
   {
     name: 'Celular',
