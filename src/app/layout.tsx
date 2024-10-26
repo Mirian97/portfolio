@@ -1,7 +1,6 @@
-import { Sofia_Sans } from 'next/font/google'
-
 import Menu from '@/features/Menu'
 import Profile from '@/features/Profile'
+import { Sofia_Sans } from 'next/font/google'
 import { FC, PropsWithChildren } from 'react'
 import './globals.css'
 
