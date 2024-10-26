@@ -39,6 +39,7 @@ const Contact = () => {
       setModalContent({ ...successModalContent })
       setOpenModal(true)
     } catch (error) {
+      console.log(error)
       setModalContent({ ...errorModalContent })
       setOpenModal(true)
     }

@@ -109,7 +109,7 @@ const Profile = () => {
             Me Contratar
           </Button>
         </Link>
-        <a href='/pdf/Mirian Quispe - CV.pdf' download>
+        <a href='/pdf/Mirian Quispe - Portfolio.pdf' download>
           <Button endIcon={<ClipIcon height={21} />} variant='outlined' size='large'>
             Baixar CV
           </Button>
@@ -124,7 +124,7 @@ const Profile = () => {
   )
 
   return (
-    <aside className='card rounded-[28px] w-full lg:relative lg:z-[1]'>
+    <aside className='card rounded-3xl w-full lg:relative lg:z-[1]'>
       {renderAvatarSection()}
       <div className='px-6 sm:px-8'>
         {renderTitleAndSocialMedia()}
