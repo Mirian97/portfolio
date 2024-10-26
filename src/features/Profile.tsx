@@ -109,7 +109,7 @@ const Profile = () => {
             Me Contratar
           </Button>
         </Link>
-        <a href='/pdf/Mirian Quispe - CV.pdf' download>
+        <a href='/pdf/Mirian Quispe - Portfolio.pdf' download>
           <Button endIcon={<ClipIcon height={21} />} variant='outlined' size='large'>
             Baixar CV
           </Button>
