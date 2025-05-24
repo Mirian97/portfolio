@@ -35,7 +35,7 @@ const ProjectItem = ({
     </Link>
     <div className='flex flex-row flex-wrap justify-center gap-1 py-4'>
       {skills.map((url) => (
-        <img key={url} src={url} alt='Tecnologia' className='w-[25px]' />
+        <img key={url} src={url} alt={`${url?.split('i=')?.[1]}`} className='w-[25px]' />
       ))}
     </div>
     <p className='text-sm leading-[17px] text-secondary-300'>{description}</p>
