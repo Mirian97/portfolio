@@ -9,11 +9,11 @@
 }
 
 *::-webkit-scrollbar {
-  width: 10px;
+  @apply w-3;
 }
 
 *::-webkit-scrollbar-thumb {
-  @apply bg-secondary-400 rounded-lg;
+  @apply bg-neutral-400 rounded-lg border-2 border-solid border-white hover:bg-primary-200 transition-colors ease-in-out duration-500;
 }
 
 body {
