@@ -28,6 +28,7 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
+    "@netlify/plugin-sitemap": "^0.8.1",
     "@svgr/webpack": "^8.0.1",
     "@types/dotenv": "^8.2.0",
     "@types/yup": "^0.32.0",
