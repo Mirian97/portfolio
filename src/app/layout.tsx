@@ -19,12 +19,13 @@ export const metadata: Metadata = {
   keywords: [
     'Mirian Quispe',
     'Mirian Quispe Montevilla',
-    'Mirian Quispe desenvolvedora',
     'portfólio desenvolvedora',
     'projetos web',
     'desenvolvimento front-end',
     'desenvolvimento full-stack',
-    'programadora'
+    'programadora',
+    'desenvolvedora',
+    'desenvolvedora web'
   ],
   openGraph: {
     title: 'Portfólio de Mirian Quispe | Projetos e Sobre Mim',
