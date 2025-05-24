@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   keywords: [
     'Mirian Quispe',
     'Mirian Quispe Montevilla',
+    'Mirian Quispe desenvolvedora',
     'portfólio desenvolvedora',
     'projetos web',
     'desenvolvimento front-end',
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     }
   },
   alternates: {
-    canonical: 'https://mirian-quispe.netlify.app/'
+    canonical: 'https://mirian-quispe.netlify.app'
   },
   viewport: 'width=device-width, initial-scale=1',
   themeColor: '#ff6563',
