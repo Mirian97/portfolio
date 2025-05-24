@@ -13,7 +13,7 @@ const sofiaSans = Sofia_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Portfólio de Mirian Quispe | Projetos e Sobre Mim',
+  title: 'Mirian Quispe | Sobre mim',
   description:
     'Conheça o portfólio de Mirian Quispe, desenvolvedora apaixonada por criar soluções digitais inovadoras. Explore projetos, habilidades e minha trajetória profissional.',
   keywords: [

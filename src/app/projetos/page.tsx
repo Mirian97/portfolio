@@ -5,8 +5,9 @@ import SectionTransition from '@/features/SectionTransition'
 import ProjectItem from '../../components/ProjectItem'
 
 export const metadata = {
-  title: 'Portfólio | Projetos',
-  description: 'Portfólio pessoal de Mirian Quispe'
+  title: 'Mirian Quispe | Projetos',
+  description:
+    'Explore o portfólio de Mirian Quispe, desenvolvedora apaixonada por criar soluções digitais inovadoras. Conheça meus projetos.'
 }
 
 const Projects = () => {
