@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -19,6 +19,7 @@
     "eslint-config-next": "13.4.4",
     "framer-motion": "^10.12.22",
     "next": "^13.4.4",
+    "next-sitemap": "^4.2.3",
     "portfolio": "file:",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -28,7 +29,6 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
-    "@netlify/plugin-sitemap": "^0.8.1",
     "@svgr/webpack": "^8.0.1",
     "@types/dotenv": "^8.2.0",
     "@types/yup": "^0.32.0",
