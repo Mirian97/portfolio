@@ -1,3 +1,4 @@
+import { ProjectItemProps } from '@/components/ProjectItem'
 import { skillIcons } from './skills'
 
 const {
@@ -77,4 +78,8 @@ const projects = [
   }
 ]
 
-export default projects
+export const projectPairs: ProjectItemProps[][] = []
+
+for (let i = 0; i < projects.length; i += 2) {
+  projectPairs.push(projects.slice(i, i + 2))
+}

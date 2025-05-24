@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import ViewIcon from '~/svg/view-icon.svg'
 
-interface ProjectItemProps {
+export interface ProjectItemProps {
   name: string
   description: string
   skills: string[]
