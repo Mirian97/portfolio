@@ -1,12 +1,13 @@
 import ProjectDivider from '@/components/ProjectDivider'
 import Title from '@/components/Title'
-import projects from '@/constants/projects'
+import { projectPairs } from '@/constants/projects'
 import SectionTransition from '@/features/SectionTransition'
 import ProjectItem from '../../components/ProjectItem'
 
 export const metadata = {
-  title: 'Portfólio | Projetos',
-  description: 'Portfólio pessoal de Mirian Quispe'
+  title: 'Mirian Quispe | Projetos',
+  description:
+    'Explore o portfólio de Mirian Quispe, desenvolvedora apaixonada por criar soluções digitais inovadoras. Conheça meus projetos.'
 }
 
 const Projects = () => {
@@ -20,27 +21,14 @@ const Projects = () => {
     <SectionTransition>
       <Title content='Projetos Recentes' />
       <div className='flex flex-col gap-6 mt-8 xs:gap-[26px]'>
-        <div className='project-grid-column'>
-          <ProjectItem {...projects[0]} />
-          {renderVerticalDivider}
-          <ProjectItem {...projects[1]} />
-        </div>
-        {renderHorizontalDivider}
-        <div className='project-grid-column'>
-          <ProjectItem {...projects[2]} />
-          {renderVerticalDivider}
-          <ProjectItem {...projects[3]} />
-        </div>
-        {renderHorizontalDivider}
-        <div className='project-grid-column'>
-          <ProjectItem {...projects[4]} />
-          {renderVerticalDivider}
-          <ProjectItem {...projects[5]} />
-        </div>
-        {renderHorizontalDivider}
-        <div className='project-grid-column'>
-          <ProjectItem {...projects[6]} />
-        </div>
+        {projectPairs.map((pair, index) => (
+          <div key={`project-row-${index}`} className='project-grid-column'>
+            <ProjectItem {...pair[0]} />
+            {pair[1] && renderVerticalDivider}
+            {pair[1] && <ProjectItem {...pair[1]} />}
+            {index < projectPairs.length - 1 && renderHorizontalDivider}
+          </div>
+        ))}
       </div>
     </SectionTransition>
   )

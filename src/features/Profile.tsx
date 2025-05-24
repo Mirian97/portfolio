@@ -57,7 +57,7 @@ const Profile = () => {
   const renderTitleAndSocialMedia = () => (
     <section className='mt-6 mb-8 sm:my-8 sm:ml-[58px]'>
       <h1 className='text-[16px] leading-[19px] text-primary-200 sm:text-2xl sm:leading-[29px] sm:mb-[10px]'>
-        Olá, sou Mirian Quispe e...
+        Olá, sou <strong className='font-normal'>Mirian Quispe</strong> e...
       </h1>
       <h1 className='font-bold text-secondary-400 text-4xl leading-[43px] sm:text-5xl sm:leading-[58px]'>
         Desenvolvedora
