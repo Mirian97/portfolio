@@ -70,14 +70,6 @@ export const metadata: Metadata = {
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang='pt-br'>
-      <head>
-        <meta
-          name='google-site-verification'
-          content='W7Myai3BstAyAFaa3J8jnKssJlIuMjVoWzPSI_tg-iw'
-        />
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='icon' href='./favicon.ico' />
-      </head>
       <body
         className={`${sofiaSans.className} flex flex-col pt-8 m-auto sm:flex-row sm:items-start sm:pl-5 sm:pt-16 md:pl-[119px] lg:justify-center lg:max-w-[1440px] lg:pl-0`}
       >

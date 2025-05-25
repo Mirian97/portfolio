@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mirian Quispe's Portfolio 👩‍💻
 
-## Getting Started
+Welcome to my personal portfolio, a showcase of my work as a Full-Stack developer passionate about creating innovative digital solutions. This project highlights my skills, recent projects, and contact information, built with modern web technologies to provide a seamless and responsive user experience.
 
-First, run the development server:
+🔎 **Live Site**: [mirian-quispe.netlify.app](https://mirian-quispe.netlify.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## About
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This portfolio serves as a professional platform to present my expertise in Full-Stack development, featuring:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **About Me**: An overview of my background, education from Cubos Academy, and current role as a Frontend developer at Wivenn.
+- **Projects**: A curated list of recent web projects, showcasing technologies like React, TypeScript, Node.js, and more.
+- **Contact**: A form to get in touch via email, integrated with EmailJS for reliable communication.
+- **Skills**: A comprehensive display of my technical skills, including frontend, backend, and DevOps tools.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+- **Responsive Design**: Optimized for mobile and desktop with dynamic layouts using Tailwind CSS and custom hooks like `useWindowSize`.
+- **Interactive Transitions**: Smooth section transitions powered by Framer Motion for an engaging user experience.
+- **Dynamic Content**: Typing effects for role highlights (e.g., Full-Stack, Frontend, Backend) using the `Typewriter` library.
+- **Form Validation**: Robust contact form with Yup schema validation for secure and user-friendly input handling.
+- **SEO Optimization**: Metadata and Open Graph tags for improved search engine visibility and social media sharing.
+- **Skill Icons**: Dynamic skill icons fetched from `skillicons.dev` for a visually appealing skills section.
+- **Project Showcase**: Grid-based project display with hover effects and links to live demos.
+- **Social Media Integration**: Links to GitHub and LinkedIn for professional networking.
 
-To learn more about Next.js, take a look at the following resources:
+## Setup and Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run the portfolio locally, follow these steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Mirian97/portfolio.git
+   cd portfolio
+   ```
+2. **Install dependencies and run**:
+   ```bash
+   pnpm install
+   pnpm run dev
+   ```
 
-## Deploy on Vercel
+## 📜 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the [MIT License](docs/LICENSE.md).
