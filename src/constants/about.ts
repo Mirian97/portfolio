@@ -18,7 +18,7 @@ export const aboutList = [
   },
   {
     name: 'Estudos',
-    description: 'Também estou estudando o Framework Angular📖'
+    description: 'Também estou estudando o Framework Angular e Java📖'
   }
 ]
 
