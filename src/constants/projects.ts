@@ -16,10 +16,28 @@ const {
   typescript,
   mySql,
   vercel,
-  vue
+  vue,
+  nest,
+  docker
 } = skillIcons
 
 const projects = [
+  {
+    name: 'Simulador Consumo de Energia',
+    skills: [nest, typescript, next, tailwind, postgres, docker],
+    description:
+      'Simulador de compensação de energia que permite calcular o valor da conta de energia elétrica com base no consumo mensal e na tarifa de energia.',
+    imagePath: '/image/compensation-energy-simulator-project.png',
+    site: 'https://e-compensation-web-production.up.railway.app/'
+  },
+  {
+    name: 'Covid-19 no Brasil',
+    skills: [next, typescript, tailwind, html, css, vercel],
+    description:
+      'Dashboard que exibe informações atualizadas sobre a Covid-19 no Brasil, incluindo casos confirmados, mortes e recuperações por estado, data e em outros paises.',
+    imagePath: '/image/covid-dashboard-project.png',
+    site: 'https://covid19-brazil-tracker.vercel.app/'
+  },
   {
     name: 'Fluxo de caixa',
     skills: [react, javascript, html, css, mui, node, express, mySql, vercel],
