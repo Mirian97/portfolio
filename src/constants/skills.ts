@@ -30,7 +30,8 @@ export const skillIcons = {
   netlify: generateIconUrl('netlify'),
   mySql: generateIconUrl('mysql'),
   vercel: generateIconUrl('vercel'),
-  vue: generateIconUrl('vue')
+  vue: generateIconUrl('vue'),
+  nest: generateIconUrl('nest')
 }
 
 const skills = [
