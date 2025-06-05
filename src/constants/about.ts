@@ -42,4 +42,4 @@ export const languages = [
   'Inglês (intermediário)'
 ]
 
-export const services = ['Frontend', 'Backend', 'Full-Stack']
+export const services = ['Full Stack', 'Back-end', 'Front-end']
