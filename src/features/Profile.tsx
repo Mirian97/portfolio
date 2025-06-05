@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import TypingEffect from '@/components/TypingEffect'
+import { services } from '@/constants/about'
 import skills from '@/constants/skills'
 import Link from 'next/link'
 import ClipIcon from '~/svg/clip-icon.svg'
@@ -24,7 +25,6 @@ const socialMedia = [
     link: 'https://www.linkedin.com/in/dev-mirian-quispe/'
   }
 ]
-const stacks = ['Full-Stack', 'Frontend', 'Backend']
 
 const Profile = () => {
   const renderAvatarSection = () => (
@@ -63,7 +63,7 @@ const Profile = () => {
         Desenvolvedora
       </h1>
       <h1 className='font-medium text-primary-200 text-[32px] leading-[38px] sm:text-[40px] sm:leading-[48px]'>
-        <TypingEffect textToBeTyped={stacks} />
+        <TypingEffect textToBeTyped={services} />
       </h1>
       <div className='flex flex-row mt-4 gap-2 sm:mt-6 sm:gap-4'>
         {socialMedia.map(({ name, link, icon }) => (

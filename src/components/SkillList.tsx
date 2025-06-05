@@ -10,9 +10,11 @@ const SkillList = ({ list, listWidth, listIcon, children }: SkillListProps) => (
     {children}
     <div className='mt-4 flex flex-col gap-2'>
       {list.map((item) => (
-        <div key={item} className={`flex flex-row gap-1 w-[${listWidth}]`}>
+        <div key={item} className={`flex flex-row gap-1.5 w-[${listWidth}]`}>
           {listIcon}
-          <p className='text-[16px] leading-[19px] text-secondary-300'>{item}</p>
+          <strong className='text-[16px] leading-[19px] font-normal text-secondary-300'>
+            {item}
+          </strong>
         </div>
       ))}
     </div>
