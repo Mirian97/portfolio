@@ -38,7 +38,7 @@ const projects = [
     description:
       'Simulador de compensação de energia que permite calcular o valor da conta de energia elétrica com base no consumo mensal e na tarifa de energia.',
     imagePath: '/image/compensation-energy-simulator-project.png',
-    site: 'https://e-compensation-web-production.up.railway.app/'
+    site: 'https://compensation-simulator-web.vercel.app/'
   },
   {
     name: 'Fluxo de caixa',
