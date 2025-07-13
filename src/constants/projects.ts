@@ -18,25 +18,27 @@ const {
   vercel,
   vue,
   nest,
-  docker
+  docker,
+  angular,
+  sass
 } = skillIcons
 
 const projects = [
   {
+    name: 'Engenheiro Civil Website',
+    skills: [typescript, angular, sass, vercel],
+    description:
+      'Site pessoal de um Engenheiro Civil, apresentando seus serviços, projetos e informações de contato.',
+    imagePath: '/image/civil-engineering-project.png',
+    site: 'https://elio-rodrigues-ferreira-engenharia.vercel.app/'
+  },
+  {
     name: 'Simulador Consumo de Energia',
-    skills: [nest, typescript, next, tailwind, postgres, docker],
+    skills: [typescript, nest, next, tailwind, postgres, docker],
     description:
       'Simulador de compensação de energia que permite calcular o valor da conta de energia elétrica com base no consumo mensal e na tarifa de energia.',
     imagePath: '/image/compensation-energy-simulator-project.png',
-    site: 'https://e-compensation-web-production.up.railway.app/'
-  },
-  {
-    name: 'Covid-19 no Brasil',
-    skills: [next, typescript, tailwind, html, css, vercel],
-    description:
-      'Dashboard que exibe informações atualizadas sobre a Covid-19 no Brasil, incluindo casos confirmados, mortes e recuperações por estado, data e em outros paises.',
-    imagePath: '/image/covid-dashboard-project.png',
-    site: 'https://covid19-brazil-tracker.vercel.app/'
+    site: 'https://compensation-simulator-web.vercel.app/'
   },
   {
     name: 'Fluxo de caixa',
@@ -45,6 +47,14 @@ const projects = [
       'Gerenciamento de fluxo de caixa, controle das entradas, saídas, clientes e categorias registradas do negócio.',
     imagePath: '/image/cash-flow-project.png',
     site: 'https://fluxodecaixa.nalupetvet.com.br/'
+  },
+  {
+    name: 'Covid-19 no Brasil',
+    skills: [next, typescript, tailwind, html, css, vercel],
+    description:
+      'Dashboard que exibe informações atualizadas sobre a Covid-19 no Brasil, incluindo casos confirmados, mortes e recuperações por estado, data e em outros paises.',
+    imagePath: '/image/covid-dashboard-project.png',
+    site: 'https://covid19-brazil-tracker.vercel.app/'
   },
   {
     name: 'MiCripto',
