@@ -26,7 +26,7 @@ const {
 const projects = [
   {
     name: 'Engenheiro Civil Website',
-    skills: [typescript, angular, sass, vercel],
+    skills: [angular, typescript, html, sass, vercel],
     description:
       'Site pessoal de um Engenheiro Civil, apresentando seus serviços, projetos e informações de contato.',
     imagePath: '/image/civil-engineering-project.png',
@@ -34,7 +34,7 @@ const projects = [
   },
   {
     name: 'Simulador Consumo de Energia',
-    skills: [typescript, nest, next, tailwind, postgres, docker],
+    skills: [typescript, nest, next, tailwind, postgres, docker, vercel],
     description:
       'Simulador de compensação de energia que permite calcular o valor da conta de energia elétrica com base no consumo mensal e na tarifa de energia.',
     imagePath: '/image/compensation-energy-simulator-project.png',
@@ -90,19 +90,11 @@ const projects = [
   },
   {
     name: 'Cart store',
-    skills: [react, typescript, react, mui, html, css, netlify],
+    skills: [react, typescript, mui, html, css, netlify],
     description:
       'Carrinho de compras onde é possível adicionar e remover um produto ou limpá-lo completamente após a confirmação do usuário.',
     imagePath: '/image/cart-store-project.png',
     site: 'https://cart-store.netlify.app/'
-  },
-  {
-    name: 'Mejor con salud',
-    skills: [react, javascript, mui, html, css, netlify],
-    description:
-      'Site com uma variedade de artigos e informações relevantes sobre saúde e bem-estar para ficar atualizado.',
-    imagePath: '/image/mejor-con-salud-project.png',
-    site: 'https://mejor-con-salud.netlify.app/'
   }
 ]
 
