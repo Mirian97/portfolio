@@ -83,6 +83,7 @@ const Profile = () => {
           <a
             key={name}
             href={site}
+            title={name}
             target='_blank'
             rel='noreferrer'
             className='cursor-pointer'
