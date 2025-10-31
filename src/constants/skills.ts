@@ -32,7 +32,8 @@ export const skillIcons = {
   vercel: generateIconUrl('vercel'),
   vue: generateIconUrl('vue'),
   nest: generateIconUrl('nest'),
-  sass: generateIconUrl('sass')
+  sass: generateIconUrl('sass'),
+  mongodb: generateIconUrl('mongodb')
 }
 
 const skills = [
