@@ -23,7 +23,7 @@ const Projects = () => {
       <div className='flex flex-col gap-6 mt-8 xs:gap-[26px]'>
         {projectPairs.map((pair, index) => (
           <div
-            key={`project-row-${pair?.[index]?.description}`}
+            key={`project-row-${pair?.[0]?.description}`}
             className='project-grid-column'
           >
             <ProjectItem {...pair[0]} />
