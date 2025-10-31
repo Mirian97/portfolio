@@ -20,10 +20,19 @@ const {
   nest,
   docker,
   angular,
-  sass
+  sass,
+  mongodb
 } = skillIcons
 
 const projects = [
+  {
+    name: 'Guardians - Aluguel de Carros',
+    skills: [typescript, nest, angular, html, tailwind, mongodb, docker, vercel, netlify],
+    description:
+      'Sistema de aluguel de carros, permitindo que usuários consultem veículos disponíveis, realizem reservas e acompanhem o processo de locação.',
+    imagePath: '/image/guardians-project.png',
+    site: 'https://car-reservation-system.netlify.app/'
+  },
   {
     name: 'Engenheiro Civil Website',
     skills: [angular, typescript, html, sass, vercel],
