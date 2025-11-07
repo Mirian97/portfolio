@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@datadog/browser-rum':
+        specifier: ^6.23.0
+        version: 6.23.0
+      '@datadog/browser-rum-react':
+        specifier: ^6.23.0
+        version: 6.23.0(@datadog/browser-rum@6.23.0)(react@18.2.0)
       '@emailjs/browser':
         specifier: ^3.11.0
         version: 3.12.1
@@ -635,6 +641,40 @@ packages:
 
   '@corex/deepmerge@4.0.43':
     resolution: {integrity: sha512-N8uEMrMPL0cu/bdboEWpQYb/0i2K5Qn8eCsxzOmxSggJbbQte7ljMRoXm917AbntqTGOzdTu+vP3KOOzoC70HQ==}
+
+  '@datadog/browser-core@6.23.0':
+    resolution: {integrity: sha512-VSBynPVukGiw4LclLIk+CnyF6ANNKOIaxOcN2NgVFp+RXvr98UwtpeIu4QSo/DykJg5dhfw6CFlc3B32lo/gkQ==}
+
+  '@datadog/browser-rum-core@6.23.0':
+    resolution: {integrity: sha512-ZdLiOb9wATGujDN/5nSyhsYxY6BXAoAlyjVqwMqPg6V4LCHy0S/fLFrQBSt2U9JT5HXwNKR4pANT5w9kq6dFOw==}
+
+  '@datadog/browser-rum-react@6.23.0':
+    resolution: {integrity: sha512-ht+PB3ZrI8D3ppSRPnvDrPWjfq9u+CrWNkBlalNpuiEmvc+a+aJoVCLmotIOpxBJ1FnpQpRDMpIDrwjoXBt1WA==}
+    peerDependencies:
+      '@datadog/browser-rum': '*'
+      '@datadog/browser-rum-slim': '*'
+      react: 18 || 19
+      react-router: 6 || 7
+      react-router-dom: 6 || 7
+    peerDependenciesMeta:
+      '@datadog/browser-rum':
+        optional: true
+      '@datadog/browser-rum-slim':
+        optional: true
+      react:
+        optional: true
+      react-router:
+        optional: true
+      react-router-dom:
+        optional: true
+
+  '@datadog/browser-rum@6.23.0':
+    resolution: {integrity: sha512-0hOqB0VeZCyt6pQjXLoOqGE6bLRJq/vc3WsQzG2QZ3iMQMSXtfKHRYxRNa3WWhrAoxulfvn8PoWNPt2+sXU//w==}
+    peerDependencies:
+      '@datadog/browser-logs': 6.23.0
+    peerDependenciesMeta:
+      '@datadog/browser-logs':
+        optional: true
 
   '@emailjs/browser@3.12.1':
     resolution: {integrity: sha512-C5nK07CgSCFx3onsuRt/ZaaMvIi0T3SHHanM7fKozjSvbZu+OjHHP9W608fYpic0OavF7yIlfy4+lRDO33JdbA==}
@@ -3374,6 +3414,25 @@ snapshots:
       '@babel/helper-validator-identifier': 7.27.1
 
   '@corex/deepmerge@4.0.43': {}
+
+  '@datadog/browser-core@6.23.0': {}
+
+  '@datadog/browser-rum-core@6.23.0':
+    dependencies:
+      '@datadog/browser-core': 6.23.0
+
+  '@datadog/browser-rum-react@6.23.0(@datadog/browser-rum@6.23.0)(react@18.2.0)':
+    dependencies:
+      '@datadog/browser-core': 6.23.0
+      '@datadog/browser-rum-core': 6.23.0
+    optionalDependencies:
+      '@datadog/browser-rum': 6.23.0
+      react: 18.2.0
+
+  '@datadog/browser-rum@6.23.0':
+    dependencies:
+      '@datadog/browser-core': 6.23.0
+      '@datadog/browser-rum-core': 6.23.0
 
   '@emailjs/browser@3.12.1': {}
 

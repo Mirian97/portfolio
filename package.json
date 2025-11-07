@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@datadog/browser-rum": "^6.23.0",
+    "@datadog/browser-rum-react": "^6.23.0",
     "@emailjs/browser": "^3.11.0",
     "@hookform/resolvers": "^3.1.0",
     "@types/node": "20.2.5",
