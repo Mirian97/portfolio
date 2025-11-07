@@ -6,7 +6,7 @@ datadogRum.init({
   clientToken: process.env.NEXT_PUBLIC_DATADOG_CLIENT_TOKEN as string,
   site: 'us5.datadoghq.com',
   service: 'mq-portfolio',
-  env: 'production',
+  env: process.env.NEXT_PUBLIC_ENV || 'development',
   version: '1.0.0',
   sessionSampleRate: 100,
   sessionReplaySampleRate: 20,

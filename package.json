@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@datadog/browser-logs": "^6.23.0",
     "@datadog/browser-rum": "^6.23.0",
     "@datadog/browser-rum-react": "^6.23.0",
     "@emailjs/browser": "^3.11.0",
