@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     icon: '/favicon.ico'
   },
   other: {
-    'google-site-verification': 'wjBO55YZ0JG4C3UKYYobNyzjQi6R-Eae3YyBYG87uYM'
+    'google-site-verification': process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION as string
   }
 }
 
