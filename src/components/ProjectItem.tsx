@@ -20,11 +20,11 @@ const ProjectItem = ({
   <div>
     <Link className='project-link cursor-pointer' href={site} target='_blank'>
       <h3 className='project-title'>{name}</h3>
-      <div className='relative w-full overflow-hidden aspect-[11/10] '>
+      <div className='relative w-full overflow-hidden aspect-[11/10] rounded-md border border-secondary-50/60'>
         <img
           src={imagePath}
           alt='Imagem do projeto'
-          className='transform duration-300 w-full h-full object-cover'
+          className='transform duration-300 w-full h-full object-cover rounded-md'
         />
         <ViewIcon
           width={40}
