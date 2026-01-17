@@ -21,7 +21,8 @@ const {
   docker,
   angular,
   sass,
-  mongodb
+  mongodb,
+  vite
 } = skillIcons
 
 const projects = [
@@ -34,7 +35,15 @@ const projects = [
     site: 'https://car-reservation-system.netlify.app/'
   },
   {
-    name: 'Engenheiro Civil Website',
+    name: 'Zentry Games',
+    skills: [react, typescript, vite, html, css, vercel],
+    description:
+      'Landing page moderna com layout imersivo, animações suaves baseadas em scroll utilizando GSAP e interações ricas na interface.',
+    imagePath: '/image/zentry-games-project.png',
+    site: 'https://zentry-games-lp.vercel.app/'
+  },
+  {
+    name: 'Website de Engenheiro Civil',
     skills: [angular, typescript, html, sass, vercel],
     description:
       'Site pessoal de um Engenheiro Civil, apresentando seus serviços, projetos e informações de contato.',

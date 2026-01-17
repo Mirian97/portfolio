@@ -33,7 +33,8 @@ export const skillIcons = {
   vue: generateIconUrl('vue'),
   nest: generateIconUrl('nest'),
   sass: generateIconUrl('sass'),
-  mongodb: generateIconUrl('mongodb')
+  mongodb: generateIconUrl('mongodb'),
+  vite: generateIconUrl('vite')
 }
 
 const skills = [
